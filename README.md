@@ -8,7 +8,8 @@ Those two exporters allow you to get LYX coin price and system metrics.
 
 1 - Run setup.sh follow instructions will download both exporters if you choose and clean up files
 
-2 - You will need to edit Promethue.yml and add to the scrape configs
+2 - You will need to edit Promethue.yml and add to the scrape configs (Check promethues.yml for the data
+    to add to your config (prometheus.yml))
 
 3 - Import the Dashboard.json
 
