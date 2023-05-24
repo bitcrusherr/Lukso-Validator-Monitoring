@@ -1,12 +1,14 @@
 # Lukso-Validator-Monitoring
 Monitor your lukso validator using a few apps put togethor and a modified eth dashboard!
 
-This is assuming you have already setup promethues and grafana and have those connected.
+setup.sh can install but not fully configure the following:
+Grafana
+Prometheus
+Node-Exporter
+JSON-Exporter
+Blackbox_Exporter
 
-Running the setup.sh will only install coin-exporter and node exporter for more data
-Those two exporters allow you to get LYX coin price and system metrics.
-
-1 - Run setup.sh follow instructions will download both exporters if you choose and clean up files
+1 - Run setup.sh follow instructions
 
 2 - You will need to edit Promethue.yml and add to the scrape configs (Check promethues.yml for the data)
 
