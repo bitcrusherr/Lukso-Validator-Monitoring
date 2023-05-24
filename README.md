@@ -1,20 +1,27 @@
 # Lukso-Validator-Monitoring
-Monitor your lukso validator using a few apps put togethor and a modified eth dashboard!
+Monitor your lukso validator using a few apps put together and using a modified eth grafana dashboard!
 
 setup.sh can install but not fully configure the following:
+
 Grafana
+
 Prometheus
+
 Node-Exporter
+
 JSON-Exporter
+
 Blackbox_Exporter
 
-1 - Run setup.sh follow instructions
+# Instructions:
+
+1 - Run setup.sh following on screen instructions
 
 2 - You will need to edit Promethue.yml and add to the scrape configs (Check promethues.yml for the data)
 
 3 - Import the Dashboard.json
 
-4 - Start all services and check to see if its all working
+4 - Start all services and check to see if its all working (if not see trouble shooting below)
 
 
 # Trouble Shooting
