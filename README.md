@@ -1,4 +1,6 @@
-# Lukso-Validator-Monitoring
+# Lukso-Validator-Monitoring (This is not 100% complete)
+
+
 Monitor your lukso validator using a few apps put together and using a prebuilt modified grafana dashboard!
 for linux systems
 
