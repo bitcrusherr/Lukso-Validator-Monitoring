@@ -30,7 +30,7 @@ If you are missing information or its not displayed correctly chances are the se
 there is a problem with the configuration, which could either be the prometheus.yml or even the information
 promethues is able to grab.
 
-You can check the query information and see the queries its sending to promethues and than check promethues to 
+You can check the query information and see the data its sending to grafana and than check promethues to 
 see if the data is coming up correclty there.
 
 You may also find there are system metrics which come from different areas and require different queries,
