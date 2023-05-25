@@ -18,13 +18,15 @@ Blackbox_Exporter
 
 # Instructions:
 
-1 - Run setup.sh following on screen instructions
+1 - Run setup.sh and follow on screen instructions
 
 2 - You will need to edit Promethue.yml and add to the scrape configs (Check promethues.yml for the data)
 
-3 - Import the Dashboard.json
+3 - Import the dashboard.json to grafana
 
 4 - Start all services and check to see if its all working (if not see trouble shooting below)
+starting of services at this stage is manual as they havent been setup as system services so will need to
+start them manually.
 
 
 # Trouble Shooting
