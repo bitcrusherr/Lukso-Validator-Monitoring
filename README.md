@@ -18,7 +18,7 @@ Blackbox_Exporter
 
 # Instructions:
 
-1 - Run setup.sh and follow on screen instructions (sudo wget -O - https://raw.githubusercontent.com/bitcrusherr/Lukso-Validator-Monitoring/main/setup.sh | sh) Without brackets
+1 - Run setup.sh and follow on screen instructions (sudo wget -O - https://raw.githubusercontent.com/bitcrusherr/Lukso-Validator-Monitoring/main/setup.sh | bash) Without brackets
 
 2 - You will need to edit Promethue.yml and add to the scrape configs (Check promethues.yml here for the data to input into your .yml file)
 
