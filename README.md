@@ -4,12 +4,9 @@
 Monitor your lukso validator using a few apps put together and using a prebuilt modified grafana dashboard!
 for linux systems
 
-run command
+Run following command (setup.sh) to install but not fully configure the following:
 
 sudo wget -O - https://raw.githubusercontent.com/bitcrusherr/Lukso-Validator-Monitoring/main/setup.sh | sh
-
-setup.sh to install but not fully configure the following:
-
 
 Grafana
 
