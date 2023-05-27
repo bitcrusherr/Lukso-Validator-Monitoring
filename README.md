@@ -5,7 +5,9 @@ Monitor your lukso validator using a few apps put together and using a prebuilt 
 for linux systems
 
 run command
-wget -O - https://raw.githubusercontent.com/bitcrusherr/Lukso-Validator-Monitoring/main/setup.sh | sh
+
+sudo wget -O - https://raw.githubusercontent.com/bitcrusherr/Lukso-Validator-Monitoring/main/setup.sh | sh
+
 setup.sh to install but not fully configure the following:
 
 
