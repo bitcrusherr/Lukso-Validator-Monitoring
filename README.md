@@ -26,9 +26,7 @@ Blackbox_Exporter
 
 4 - Start all services and check to see if its all working (if not see trouble shooting below)
 
-starting of services at this stage is manual as they havent been setup as system services so will need to
-start them manually)
-
+starting of services at this stage is manual as they havent been setup as system services
 
 # Trouble Shooting
 If you are missing information or its not displayed correctly chances are the service isnt started or
