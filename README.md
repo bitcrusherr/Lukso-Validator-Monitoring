@@ -4,7 +4,7 @@
 Monitor your lukso validator using a few apps put together and using a prebuilt modified grafana dashboard!
 for linux systems
 
-Run setup.sh to install but not fully configure the following services:
+Run setup.sh to install but not fully configure the following services / applications:
 
 Grafana
 
@@ -24,9 +24,9 @@ Blackbox_Exporter
 
 3 - Import the dashboard.json to grafana
 
-4 - Start all services and check to see if its all working (if not see trouble shooting below)
+4 - Start all services / applications and check to see if its all working (if not see trouble shooting below)
 
-starting of services at this stage is manual as they havent been setup as system services
+starting of services / applications at this stage is manual as they havent been setup as system services
 
 # Trouble Shooting
 If you are missing information or its not displayed correctly chances are the service isnt started or
