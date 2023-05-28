@@ -24,7 +24,7 @@ read -p "Press Enter to continue....." enter
 sudo apt install wget make git apt-transport-https software-properties-common gnupg2
 
 echo 
-read -p "Install Promethues? (yes = y / no = n): " Y_N
+read -p "Install Promethues? (y = yes / n = no): " Y_N
 while [ "$Y_N" = "y" ]; do
 echo "installing Promethues"
 sudo wget https://github.com/prometheus/prometheus/releases/download/v2.44.0/prometheus-2.44.0.linux-amd64.tar.gz --directory-prefix "/home/$logname"
@@ -34,20 +34,20 @@ Y_N=n
 done
 
 echo 
-read -p "Install Grafana? (yes = y / no = n): " Y_N
+read -p "Install Grafana? (y = yes / n = no): " Y_N
 while [ "$Y_N" = "y" ]; do
 echo "installing Grafana"
 sudo apt-get install -y apt-transport-https
 sudo apt-get install -y software-properties-common wget
-sudo wget -q -O /usr/share/keyrings/grafana.key https://apt.grafana.com/gpg.key
-sudo echo "deb [signed-by=/usr/share/keyrings/grafana.key] https://apt.grafana.com stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
+$(sudo wget -q -O /usr/share/keyrings/grafana.key https://apt.grafana.com/gpg.key)
+$(sudo echo "deb [signed-by=/usr/share/keyrings/grafana.key] https://apt.grafana.com stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list)
 sudo apt-get update
 sudo apt-get install grafana
 Y_N=n
 done
 
 echo
-read -p "Install node-exporter? (yes = y / no = n): " Y_N
+read -p "Install node-exporter? (y = yes / n = no): " Y_N
 while [ "$Y_N" = "y" ]; do
 echo "installing node-exporter"
 sudo wget https://github.com/prometheus/node_exporter/releases/download/v1.5.0/node_exporter-1.5.0.linux-386.tar.gz --directory-prefix "/home/$logname"
@@ -57,7 +57,7 @@ Y_N=n
 done
 
 echo
-read -p "Install JSON-exporter? (yes = y / no = n): " Y_N
+read -p "Install JSON-exporter? (y = yes / n = no): " Y_N
 while [ "$Y_N" = "y" ]; do
 echo "insalling JSON-exporter"
 sudo wget https://dl.google.com/go/go1.20.4.linux-amd64.tar.gz --directory-prefix "/home/$logname/"
@@ -78,7 +78,7 @@ Y_N=n
 done
 
 echo
-read -p "Install BlackBox-exporter? (yes = y / no = n): " Y_N
+read -p "Install BlackBox-exporter? (y = yes / n = no): " Y_N
 while [ "$Y_N" = "y" ]; do
 echo "installing BlackBox-exporter"
 sudo wget https://github.com/prometheus/blackbox_exporter/releases/download/v0.23.0/blackbox_exporter-0.23.0.linux-amd64.tar.gz --directory-prefix "/home/$logname"
@@ -101,5 +101,5 @@ echo
 echo -----------------------------------------------------------
 echo $nocolor
 echo
-echo "Finished, follow install instructions for remaining steps"
+echo "Finished, follow install instructions on github for remaining steps"
 echo 
