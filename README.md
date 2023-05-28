@@ -26,7 +26,7 @@ Blackbox_Exporter
 
 4 - Start all services and check to see if its all working (if not see trouble shooting below)
 starting of services at this stage is manual as they havent been setup as system services so will need to
-start them manually.
+start them manually)
 
 
 # Trouble Shooting
@@ -34,8 +34,10 @@ If you are missing information or its not displayed correctly chances are the se
 there is a problem with the configuration, which could either be the prometheus.yml or even the information
 promethues is able to grab.
 
-You can check the query information and see the data its sending to grafana and than check promethues to 
+You can check the query information and see the data grafana is pulling from prometheus and than check promethues to 
 see if the data is coming up correclty there.
 
 You may also find there are system metrics which come from different areas and require different queries,
 this is done by just searching promethues for the one that suits your system.
+
+If you are running on a vm / vps chances are some system metrics will not be available for example tempretures
