@@ -10,7 +10,7 @@
         "enable": true,
         "hide": true,
         "iconColor": "rgba(0, 211, 255, 1)",
-        "name": "Annotations & Alerts",
+        "name": "",
         "type": "dashboard"
       }
     ]
@@ -76,7 +76,7 @@
       },
       "gridPos": {
         "h": 1,
-        "w": 12,
+        "w": 8,
         "x": 0,
         "y": 0
       },
@@ -162,8 +162,8 @@
       },
       "gridPos": {
         "h": 1,
-        "w": 12,
-        "x": 12,
+        "w": 8,
+        "x": 8,
         "y": 0
       },
       "id": 56,
@@ -205,6 +205,95 @@
         "type": "prometheus",
         "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
       },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [
+            {
+              "options": {
+                "1": {
+                  "text": ""
+                }
+              },
+              "type": "value"
+            },
+            {
+              "options": {
+                "match": "null",
+                "result": {
+                  "text": ""
+                }
+              },
+              "type": "special"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "rgb(105, 70, 0)",
+                "value": null
+              },
+              {
+                "color": "rgb(105, 70, 0)",
+                "value": 0
+              },
+              {
+                "color": "rgb(105, 70, 0)",
+                "value": 0
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 1,
+        "w": 8,
+        "x": 16,
+        "y": 0
+      },
+      "id": 58,
+      "links": [],
+      "maxDataPoints": 100,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.5.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
+          },
+          "expr": "1",
+          "interval": "",
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "title": "Server",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
+      },
       "description": "Sum of all validator balances.",
       "fieldConfig": {
         "defaults": {
@@ -227,7 +316,7 @@
       },
       "gridPos": {
         "h": 2,
-        "w": 3,
+        "w": 2,
         "x": 0,
         "y": 1
       },
@@ -307,8 +396,8 @@
       },
       "gridPos": {
         "h": 2,
-        "w": 3,
-        "x": 3,
+        "w": 2,
+        "x": 2,
         "y": 1
       },
       "id": 52,
@@ -396,8 +485,8 @@
       },
       "gridPos": {
         "h": 2,
-        "w": 3,
-        "x": 6,
+        "w": 2,
+        "x": 4,
         "y": 1
       },
       "id": 70,
@@ -472,8 +561,8 @@
       },
       "gridPos": {
         "h": 2,
-        "w": 3,
-        "x": 9,
+        "w": 2,
+        "x": 6,
         "y": 1
       },
       "id": 98,
@@ -547,8 +636,8 @@
       },
       "gridPos": {
         "h": 3,
-        "w": 3,
-        "x": 12,
+        "w": 2,
+        "x": 8,
         "y": 1
       },
       "id": 23,
@@ -622,8 +711,8 @@
       },
       "gridPos": {
         "h": 3,
-        "w": 3,
-        "x": 15,
+        "w": 2,
+        "x": 10,
         "y": 1
       },
       "id": 73,
@@ -682,8 +771,8 @@
       },
       "gridPos": {
         "h": 3,
-        "w": 3,
-        "x": 18,
+        "w": 2,
+        "x": 12,
         "y": 1
       },
       "id": 27,
@@ -758,8 +847,8 @@
       },
       "gridPos": {
         "h": 3,
-        "w": 3,
-        "x": 21,
+        "w": 2,
+        "x": 14,
         "y": 1
       },
       "id": 29,
@@ -812,6 +901,212 @@
         "type": "prometheus",
         "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
       },
+      "description": "CPU usage on the server",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 40,
+            "gradientMode": "opacity",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "never",
+            "spanNulls": true,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "links": [],
+          "mappings": [],
+          "max": 3600000000,
+          "min": 0,
+          "thresholds": {
+            "mode": "percentage",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "rothz"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 8,
+        "x": 16,
+        "y": 1
+      },
+      "id": 17,
+      "options": {
+        "legend": {
+          "calcs": [
+            "max",
+            "min",
+            "last"
+          ],
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "pluginVersion": "9.5.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
+          },
+          "editorMode": "code",
+          "exemplar": false,
+          "expr": "node_cpu_scaling_frequency_hertz{cpu=\"0\", instance=\"localhost:9100\", job=\"node\"}",
+          "instant": false,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "CPU 1",
+          "range": true,
+          "refId": "A"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
+          },
+          "editorMode": "code",
+          "exemplar": false,
+          "expr": "node_cpu_scaling_frequency_hertz{cpu=\"1\", instance=\"localhost:9100\", job=\"node\"}",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "CPU 2",
+          "range": true,
+          "refId": "B"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
+          },
+          "editorMode": "code",
+          "exemplar": false,
+          "expr": "node_cpu_scaling_frequency_hertz{cpu=\"2\", instance=\"localhost:9100\", job=\"node\"}\r\n",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "CPU 3",
+          "range": true,
+          "refId": "C"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
+          },
+          "editorMode": "code",
+          "exemplar": false,
+          "expr": "node_cpu_scaling_frequency_hertz{cpu=\"3\", instance=\"localhost:9100\", job=\"node\"}\r\n",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "CPU 4",
+          "range": true,
+          "refId": "D"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
+          },
+          "editorMode": "code",
+          "exemplar": false,
+          "expr": "node_cpu_scaling_frequency_hertz{cpu=\"4\", instance=\"localhost:9100\", job=\"node\"}\r\n",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "CPU 5",
+          "range": true,
+          "refId": "E"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
+          },
+          "editorMode": "code",
+          "exemplar": false,
+          "expr": "node_cpu_scaling_frequency_hertz{cpu=\"5\", instance=\"localhost:9100\", job=\"node\"}\r\n",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "CPU 6",
+          "range": true,
+          "refId": "F"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
+          },
+          "editorMode": "code",
+          "exemplar": false,
+          "expr": "node_cpu_scaling_frequency_hertz{cpu=\"6\", instance=\"localhost:9100\", job=\"node\"}\r\n",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "CPU 7",
+          "range": true,
+          "refId": "G"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
+          },
+          "editorMode": "code",
+          "exemplar": false,
+          "expr": "node_cpu_scaling_frequency_hertz{cpu=\"7\", instance=\"localhost:9100\", job=\"node\"}\r\n",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "CPU 8",
+          "range": true,
+          "refId": "H"
+        }
+      ],
+      "timeFrom": "1h",
+      "title": "CPU Usage",
+      "transformations": [],
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
+      },
       "description": "Sum of all validator balances multiplied by the price of LYX in USD.",
       "fieldConfig": {
         "defaults": {
@@ -833,7 +1128,7 @@
       },
       "gridPos": {
         "h": 2,
-        "w": 3,
+        "w": 2,
         "x": 0,
         "y": 3
       },
@@ -936,8 +1231,8 @@
       },
       "gridPos": {
         "h": 2,
-        "w": 3,
-        "x": 3,
+        "w": 2,
+        "x": 2,
         "y": 3
       },
       "id": 101,
@@ -1020,7 +1315,7 @@
         "type": "prometheus",
         "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
       },
-      "description": "Price of LYX in USD.",
+      "description": "Total earnings in USD.",
       "fieldConfig": {
         "defaults": {
           "decimals": 2,
@@ -1036,7 +1331,6 @@
             }
           ],
           "min": 0,
-          "noValue": "9999999",
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -1052,12 +1346,11 @@
       },
       "gridPos": {
         "h": 2,
-        "w": 3,
-        "x": 6,
+        "w": 2,
+        "x": 4,
         "y": 3
       },
-      "id": 102,
-      "interval": "15s",
+      "id": 112,
       "links": [],
       "maxDataPoints": 100,
       "options": {
@@ -1087,18 +1380,49 @@
             "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
           },
           "editorMode": "code",
-          "exemplar": false,
+          "expr": "sum(validator_balance{job=\"validator\"})-(count(validator_balance{job=\"validator\"} > 16 and validator_statuses{job=\"validator\"} == 3)*32)",
+          "instant": true,
+          "interval": "",
+          "legendFormat": "total_balance",
+          "refId": "A"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
+          },
+          "editorMode": "code",
           "expr": "lyxusd",
-          "format": "table",
           "instant": true,
           "interval": "",
           "legendFormat": "lyxusd",
-          "range": false,
           "refId": "B"
+        },
+        {
+          "datasource": {
+            "name": "Expression",
+            "type": "__expr__",
+            "uid": "__expr__"
+          },
+          "expression": "$A * $B",
+          "hide": false,
+          "refId": "C",
+          "type": "math"
         }
       ],
-      "title": "LYX Price (USD)",
-      "transformations": [],
+      "title": "Total Earnings (USD)",
+      "transformations": [
+        {
+          "id": "reduce",
+          "options": {
+            "includeTimeField": false,
+            "mode": "seriesToRows",
+            "reducers": [
+              "max"
+            ]
+          }
+        }
+      ],
       "type": "stat"
     },
     {
@@ -1138,8 +1462,8 @@
       },
       "gridPos": {
         "h": 2,
-        "w": 3,
-        "x": 9,
+        "w": 2,
+        "x": 6,
         "y": 3
       },
       "id": 104,
@@ -1223,8 +1547,8 @@
       },
       "gridPos": {
         "h": 1,
-        "w": 12,
-        "x": 12,
+        "w": 8,
+        "x": 8,
         "y": 4
       },
       "id": 65,
@@ -1312,7 +1636,7 @@
       },
       "gridPos": {
         "h": 1,
-        "w": 12,
+        "w": 8,
         "x": 0,
         "y": 5
       },
@@ -1376,8 +1700,8 @@
       },
       "gridPos": {
         "h": 3,
-        "w": 3,
-        "x": 12,
+        "w": 2,
+        "x": 8,
         "y": 5
       },
       "id": 71,
@@ -1482,8 +1806,8 @@
       },
       "gridPos": {
         "h": 3,
-        "w": 3,
-        "x": 15,
+        "w": 2,
+        "x": 10,
         "y": 5
       },
       "id": 33,
@@ -1544,8 +1868,8 @@
       },
       "gridPos": {
         "h": 3,
-        "w": 3,
-        "x": 18,
+        "w": 2,
+        "x": 12,
         "y": 5
       },
       "id": 87,
@@ -1615,8 +1939,8 @@
       },
       "gridPos": {
         "h": 3,
-        "w": 3,
-        "x": 21,
+        "w": 2,
+        "x": 14,
         "y": 5
       },
       "id": 88,
@@ -1708,7 +2032,7 @@
       },
       "gridPos": {
         "h": 2,
-        "w": 3,
+        "w": 2,
         "x": 0,
         "y": 6
       },
@@ -1736,6 +2060,7 @@
             "type": "prometheus",
             "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
           },
+          "editorMode": "code",
           "expr": "sum(validator_balance{job=\"validator\"}) - sum(validator_balance{job=\"validator\"} offset 1h != 0) - (32 * count(validator_balance{job=\"validator\"} > 16)) + (32 * count(validator_balance{job=\"validator\"} offset 1h > 16))",
           "instant": false,
           "interval": "",
@@ -1793,8 +2118,8 @@
       },
       "gridPos": {
         "h": 2,
-        "w": 3,
-        "x": 3,
+        "w": 2,
+        "x": 2,
         "y": 6
       },
       "id": 48,
@@ -1821,6 +2146,7 @@
             "type": "prometheus",
             "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
           },
+          "editorMode": "code",
           "expr": "sum(validator_balance{job=\"validator\"}) - sum(validator_balance{job=\"validator\"} offset 1d != 0) - (32 * count(validator_balance{job=\"validator\"} > 16)) + (32 * count(validator_balance{job=\"validator\"} offset 1d > 16))",
           "instant": false,
           "interval": "",
@@ -1828,7 +2154,8 @@
           "refId": "A"
         }
       ],
-      "title": "Daily Earnings",
+      "title": "Daily Earnings (LYX)",
+      "transformations": [],
       "type": "stat"
     },
     {
@@ -1877,8 +2204,8 @@
       },
       "gridPos": {
         "h": 2,
-        "w": 3,
-        "x": 6,
+        "w": 2,
+        "x": 4,
         "y": 6
       },
       "id": 49,
@@ -1905,6 +2232,7 @@
             "type": "prometheus",
             "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
           },
+          "editorMode": "code",
           "expr": "sum(validator_balance{job=\"validator\"}) - sum(validator_balance{job=\"validator\"} offset 7d != 0) - (32 * count(validator_balance{job=\"validator\"} > 16)) + (32 * count(validator_balance{job=\"validator\"} offset 7d > 16))",
           "instant": false,
           "interval": "",
@@ -1961,8 +2289,8 @@
       },
       "gridPos": {
         "h": 2,
-        "w": 3,
-        "x": 9,
+        "w": 2,
+        "x": 6,
         "y": 6
       },
       "id": 50,
@@ -1989,6 +2317,7 @@
             "type": "prometheus",
             "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
           },
+          "editorMode": "code",
           "expr": "sum(validator_balance{job=\"validator\"}) - sum(validator_balance{job=\"validator\"} offset 30d != 0) - (32 * count(validator_balance{job=\"validator\"} > 16)) + (32 * count(validator_balance{job=\"validator\"} offset 30d > 16))",
           "instant": false,
           "interval": "",
@@ -2004,13 +2333,10 @@
         "type": "prometheus",
         "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
       },
-      "description": "Percentage increase in all local validator balances over the last hour",
+      "description": "Price of LYX in USD.",
       "fieldConfig": {
         "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "decimals": 4,
+          "decimals": 5,
           "mappings": [
             {
               "options": {
@@ -2022,290 +2348,38 @@
               "type": "special"
             }
           ],
+          "min": 0,
+          "noValue": "9999999",
           "thresholds": {
             "mode": "absolute",
             "steps": [
               {
-                "color": "#F2495C",
+                "color": "green",
                 "value": null
-              },
-              {
-                "color": "#FADE2A",
-                "value": 0
-              },
-              {
-                "color": "#73BF69",
-                "value": 0.0001
               }
             ]
           },
-          "unit": "percentunit"
+          "unit": "currencyUSD"
         },
         "overrides": []
       },
       "gridPos": {
         "h": 2,
-        "w": 3,
+        "w": 2,
         "x": 0,
         "y": 8
       },
-      "id": 82,
+      "id": 113,
+      "interval": "15s",
       "links": [],
       "maxDataPoints": 100,
       "options": {
         "colorMode": "value",
-        "graphMode": "area",
-        "justifyMode": "auto",
-        "orientation": "horizontal",
-        "reduceOptions": {
+        "fieldOptions": {
           "calcs": [
             "lastNotNull"
-          ],
-          "fields": "/^annualized hourly return$/",
-          "values": false
+          ]
         },
-        "textMode": "auto"
-      },
-      "pluginVersion": "9.5.1",
-      "targets": [
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
-          },
-          "expr": "((sum(validator_balance{job=\"validator\"}) - sum(validator_balance{job=\"validator\"} offset 1h != 0) - (32 * count(validator_balance{job=\"validator\"} > 16)) +\t(32 * count(validator_balance{job=\"validator\"} offset 1h > 16)))/(32 * avg_over_time(count(validator_balance{job=\"validator\"} > 16)[1h:]))) * 365 * 24",
-          "hide": false,
-          "interval": "",
-          "legendFormat": "annualized hourly return",
-          "refId": "B"
-        }
-      ],
-      "title": "Hourly Return, Annualized",
-      "type": "stat"
-    },
-    {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
-      },
-      "description": "Percentage increase in all local validator balances over the last day",
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "decimals": 4,
-          "mappings": [
-            {
-              "options": {
-                "match": "null",
-                "result": {
-                  "text": "N/A"
-                }
-              },
-              "type": "special"
-            }
-          ],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "#F2495C",
-                "value": null
-              },
-              {
-                "color": "#FADE2A",
-                "value": 0
-              },
-              {
-                "color": "#73BF69",
-                "value": 0.0001
-              }
-            ]
-          },
-          "unit": "percentunit"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 2,
-        "w": 3,
-        "x": 3,
-        "y": 8
-      },
-      "id": 69,
-      "links": [],
-      "maxDataPoints": 100,
-      "options": {
-        "colorMode": "value",
-        "graphMode": "area",
-        "justifyMode": "auto",
-        "orientation": "horizontal",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "/^annualized daily return$/",
-          "values": false
-        },
-        "textMode": "auto"
-      },
-      "pluginVersion": "9.5.1",
-      "targets": [
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
-          },
-          "expr": "((sum(validator_balance{job=\"validator\"}) - sum(validator_balance{job=\"validator\"} offset 1d != 0) - (32 * count(validator_balance{job=\"validator\"} > 16)) +\t(32 * count(validator_balance{job=\"validator\"} offset 1d > 16)))/(32 * avg_over_time(count(validator_balance{job=\"validator\"} > 16)[1d:]))) * 365",
-          "hide": false,
-          "interval": "",
-          "legendFormat": "annualized daily return",
-          "refId": "B"
-        }
-      ],
-      "title": "Daily Return, Annualized",
-      "type": "stat"
-    },
-    {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
-      },
-      "description": "Percentage increase in all local validator balances over the last week",
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "decimals": 4,
-          "mappings": [
-            {
-              "options": {
-                "match": "null",
-                "result": {
-                  "text": "N/A"
-                }
-              },
-              "type": "special"
-            }
-          ],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "#F2495C",
-                "value": null
-              },
-              {
-                "color": "#FADE2A",
-                "value": 0
-              },
-              {
-                "color": "#73BF69",
-                "value": 0.0001
-              }
-            ]
-          },
-          "unit": "percentunit"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 2,
-        "w": 3,
-        "x": 6,
-        "y": 8
-      },
-      "id": 83,
-      "links": [],
-      "maxDataPoints": 100,
-      "options": {
-        "colorMode": "value",
-        "graphMode": "area",
-        "justifyMode": "auto",
-        "orientation": "horizontal",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "/^annualized weekly return$/",
-          "values": false
-        },
-        "textMode": "auto"
-      },
-      "pluginVersion": "9.5.1",
-      "targets": [
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
-          },
-          "expr": "((sum(validator_balance{job=\"validator\"}) - sum(validator_balance{job=\"validator\"} offset 7d != 0) - (32 * count(validator_balance{job=\"validator\"} > 16)) +\t(32 * count(validator_balance{job=\"validator\"} offset 7d > 16)))/(32 * avg_over_time(count(validator_balance{job=\"validator\"} > 16)[7d:]))) * (365/7)",
-          "hide": false,
-          "interval": "",
-          "legendFormat": "annualized weekly return",
-          "refId": "B"
-        }
-      ],
-      "title": "Weekly Return, Annualized",
-      "type": "stat"
-    },
-    {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
-      },
-      "description": "Percentage increase in all local validator balances over the last month",
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "decimals": 4,
-          "mappings": [
-            {
-              "options": {
-                "match": "null",
-                "result": {
-                  "text": "N/A"
-                }
-              },
-              "type": "special"
-            }
-          ],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "#F2495C",
-                "value": null
-              },
-              {
-                "color": "#FADE2A",
-                "value": 0
-              },
-              {
-                "color": "#73BF69",
-                "value": 0.0001
-              }
-            ]
-          },
-          "unit": "percentunit"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 2,
-        "w": 3,
-        "x": 9,
-        "y": 8
-      },
-      "id": 84,
-      "links": [],
-      "maxDataPoints": 100,
-      "options": {
-        "colorMode": "value",
         "graphMode": "area",
         "justifyMode": "auto",
         "orientation": "horizontal",
@@ -2325,14 +2399,265 @@
             "type": "prometheus",
             "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
           },
-          "expr": "((sum(validator_balance{job=\"validator\"}) - sum(validator_balance{job=\"validator\"} offset 30d != 0) - (32 * count(validator_balance{job=\"validator\"} > 16)) +\t(32 * count(validator_balance{job=\"validator\"} offset 30d > 16)))/(32 * avg_over_time(count(validator_balance{job=\"validator\"} > 16)[30d:]))) * (365/30)",
+          "editorMode": "code",
+          "expr": "sum(validator_balance{job=\"validator\"}) - sum(validator_balance{job=\"validator\"} offset 1h != 0) - (32 * count(validator_balance{job=\"validator\"} > 16)) + (32 * count(validator_balance{job=\"validator\"} offset 1h > 16)) * count(lyxusd)",
           "hide": false,
-          "interval": "",
-          "legendFormat": "annualized monthly return",
-          "refId": "B"
+          "legendFormat": "balance",
+          "range": true,
+          "refId": "A"
         }
       ],
-      "title": "Monthly Return, Annualized",
+      "title": "Hourly Earnings (USD)",
+      "transformations": [],
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
+      },
+      "description": "Price of LYX in USD.",
+      "fieldConfig": {
+        "defaults": {
+          "decimals": 2,
+          "mappings": [
+            {
+              "options": {
+                "match": "null",
+                "result": {
+                  "text": "N/A"
+                }
+              },
+              "type": "special"
+            }
+          ],
+          "min": 0,
+          "noValue": "9999999",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "currencyUSD"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 2,
+        "x": 2,
+        "y": 8
+      },
+      "id": 102,
+      "interval": "15s",
+      "links": [],
+      "maxDataPoints": 100,
+      "options": {
+        "colorMode": "value",
+        "fieldOptions": {
+          "calcs": [
+            "lastNotNull"
+          ]
+        },
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.5.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
+          },
+          "editorMode": "code",
+          "expr": "sum(validator_balance{job=\"validator\"}) - sum(validator_balance{job=\"validator\"} offset 1d != 0) - (32 * count(validator_balance{job=\"validator\"} > 16)) + (32 * count(validator_balance{job=\"validator\"} offset 1d > 16)) * count(lyxusd)",
+          "hide": false,
+          "legendFormat": "balance",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Daily Earnings (USD)",
+      "transformations": [],
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
+      },
+      "description": "Price of LYX in USD.",
+      "fieldConfig": {
+        "defaults": {
+          "decimals": 2,
+          "mappings": [
+            {
+              "options": {
+                "match": "null",
+                "result": {
+                  "text": "N/A"
+                }
+              },
+              "type": "special"
+            }
+          ],
+          "min": 0,
+          "noValue": "9999999",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "currencyUSD"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 2,
+        "x": 4,
+        "y": 8
+      },
+      "id": 114,
+      "interval": "15s",
+      "links": [],
+      "maxDataPoints": 100,
+      "options": {
+        "colorMode": "value",
+        "fieldOptions": {
+          "calcs": [
+            "lastNotNull"
+          ]
+        },
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.5.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
+          },
+          "editorMode": "code",
+          "expr": "sum(validator_balance{job=\"validator\"}) - sum(validator_balance{job=\"validator\"} offset 7d != 0) - (32 * count(validator_balance{job=\"validator\"} > 16)) + (32 * count(validator_balance{job=\"validator\"} offset 7d > 16)) * count(lyxusd)",
+          "hide": false,
+          "legendFormat": "balance",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Weekly Earnings (USD)",
+      "transformations": [],
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
+      },
+      "description": "Price of LYX in USD.",
+      "fieldConfig": {
+        "defaults": {
+          "decimals": 2,
+          "mappings": [
+            {
+              "options": {
+                "match": "null",
+                "result": {
+                  "text": "N/A"
+                }
+              },
+              "type": "special"
+            }
+          ],
+          "min": 0,
+          "noValue": "9999999",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "currencyUSD"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 2,
+        "x": 6,
+        "y": 8
+      },
+      "id": 115,
+      "interval": "15s",
+      "links": [],
+      "maxDataPoints": 100,
+      "options": {
+        "colorMode": "value",
+        "fieldOptions": {
+          "calcs": [
+            "lastNotNull"
+          ]
+        },
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.5.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
+          },
+          "editorMode": "code",
+          "expr": "sum(validator_balance{job=\"validator\"}) - sum(validator_balance{job=\"validator\"} offset 30d != 0) - (32 * count(validator_balance{job=\"validator\"} > 16)) + (32 * count(validator_balance{job=\"validator\"} offset 30d > 16)) * count(lyxusd)",
+          "hide": false,
+          "legendFormat": "balance",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Daily Earnings (USD)",
+      "transformations": [],
       "type": "stat"
     },
     {
@@ -2387,8 +2712,8 @@
       },
       "gridPos": {
         "h": 1,
-        "w": 12,
-        "x": 12,
+        "w": 8,
+        "x": 8,
         "y": 8
       },
       "id": 57,
@@ -2467,8 +2792,8 @@
       },
       "gridPos": {
         "h": 3,
-        "w": 3,
-        "x": 12,
+        "w": 2,
+        "x": 8,
         "y": 9
       },
       "id": 45,
@@ -2559,8 +2884,8 @@
       },
       "gridPos": {
         "h": 3,
-        "w": 3,
-        "x": 15,
+        "w": 2,
+        "x": 10,
         "y": 9
       },
       "id": 108,
@@ -2651,8 +2976,8 @@
       },
       "gridPos": {
         "h": 3,
-        "w": 3,
-        "x": 18,
+        "w": 2,
+        "x": 12,
         "y": 9
       },
       "id": 76,
@@ -2736,8 +3061,8 @@
       },
       "gridPos": {
         "h": 3,
-        "w": 3,
-        "x": 21,
+        "w": 2,
+        "x": 14,
         "y": 9
       },
       "id": 79,
@@ -2797,6 +3122,446 @@
         "type": "prometheus",
         "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
       },
+      "description": "Current CPU Temperature ",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "smooth",
+            "lineStyle": {
+              "fill": "solid"
+            },
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "celsius"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 8,
+        "x": 16,
+        "y": 9
+      },
+      "id": 90,
+      "options": {
+        "legend": {
+          "calcs": [
+            "max",
+            "min",
+            "last"
+          ],
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "desc"
+        }
+      },
+      "pluginVersion": "9.5.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
+          },
+          "editorMode": "code",
+          "expr": "node_hwmon_temp_celsius{chip=\"platform_coretemp_0\", instance=\"localhost:9100\", job=\"node\", sensor=\"temp4\"}",
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "CPU Temp",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "CPU Temp",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
+      },
+      "description": "Percentage increase in all local validator balances over the last hour",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "decimals": 4,
+          "mappings": [
+            {
+              "options": {
+                "match": "null",
+                "result": {
+                  "text": "N/A"
+                }
+              },
+              "type": "special"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "#F2495C",
+                "value": null
+              },
+              {
+                "color": "#FADE2A",
+                "value": 0
+              },
+              {
+                "color": "#73BF69",
+                "value": 0.0001
+              }
+            ]
+          },
+          "unit": "percentunit"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 2,
+        "x": 0,
+        "y": 10
+      },
+      "id": 82,
+      "links": [],
+      "maxDataPoints": 100,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "/^annualized hourly return$/",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.5.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
+          },
+          "expr": "((sum(validator_balance{job=\"validator\"}) - sum(validator_balance{job=\"validator\"} offset 1h != 0) - (32 * count(validator_balance{job=\"validator\"} > 16)) +\t(32 * count(validator_balance{job=\"validator\"} offset 1h > 16)))/(32 * avg_over_time(count(validator_balance{job=\"validator\"} > 16)[1h:]))) * 365 * 24",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "annualized hourly return",
+          "refId": "B"
+        }
+      ],
+      "title": "Hourly Return, Annualized",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
+      },
+      "description": "Percentage increase in all local validator balances over the last day",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "decimals": 4,
+          "mappings": [
+            {
+              "options": {
+                "match": "null",
+                "result": {
+                  "text": "N/A"
+                }
+              },
+              "type": "special"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "#F2495C",
+                "value": null
+              },
+              {
+                "color": "#FADE2A",
+                "value": 0
+              },
+              {
+                "color": "#73BF69",
+                "value": 0.0001
+              }
+            ]
+          },
+          "unit": "percentunit"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 2,
+        "x": 2,
+        "y": 10
+      },
+      "id": 69,
+      "links": [],
+      "maxDataPoints": 100,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "/^annualized daily return$/",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.5.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
+          },
+          "expr": "((sum(validator_balance{job=\"validator\"}) - sum(validator_balance{job=\"validator\"} offset 1d != 0) - (32 * count(validator_balance{job=\"validator\"} > 16)) +\t(32 * count(validator_balance{job=\"validator\"} offset 1d > 16)))/(32 * avg_over_time(count(validator_balance{job=\"validator\"} > 16)[1d:]))) * 365",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "annualized daily return",
+          "refId": "B"
+        }
+      ],
+      "title": "Daily Return, Annualized",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
+      },
+      "description": "Percentage increase in all local validator balances over the last week",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "decimals": 4,
+          "mappings": [
+            {
+              "options": {
+                "match": "null",
+                "result": {
+                  "text": "N/A"
+                }
+              },
+              "type": "special"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "#F2495C",
+                "value": null
+              },
+              {
+                "color": "#FADE2A",
+                "value": 0
+              },
+              {
+                "color": "#73BF69",
+                "value": 0.0001
+              }
+            ]
+          },
+          "unit": "percentunit"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 2,
+        "x": 4,
+        "y": 10
+      },
+      "id": 83,
+      "links": [],
+      "maxDataPoints": 100,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "/^annualized weekly return$/",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.5.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
+          },
+          "expr": "((sum(validator_balance{job=\"validator\"}) - sum(validator_balance{job=\"validator\"} offset 7d != 0) - (32 * count(validator_balance{job=\"validator\"} > 16)) +\t(32 * count(validator_balance{job=\"validator\"} offset 7d > 16)))/(32 * avg_over_time(count(validator_balance{job=\"validator\"} > 16)[7d:]))) * (365/7)",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "annualized weekly return",
+          "refId": "B"
+        }
+      ],
+      "title": "Weekly Return, Annualized",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
+      },
+      "description": "Percentage increase in all local validator balances over the last month",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "decimals": 4,
+          "mappings": [
+            {
+              "options": {
+                "match": "null",
+                "result": {
+                  "text": "N/A"
+                }
+              },
+              "type": "special"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "#F2495C",
+                "value": null
+              },
+              {
+                "color": "#FADE2A",
+                "value": 0
+              },
+              {
+                "color": "#73BF69",
+                "value": 0.0001
+              }
+            ]
+          },
+          "unit": "percentunit"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 2,
+        "x": 6,
+        "y": 10
+      },
+      "id": 84,
+      "links": [],
+      "maxDataPoints": 100,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.5.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
+          },
+          "expr": "((sum(validator_balance{job=\"validator\"}) - sum(validator_balance{job=\"validator\"} offset 30d != 0) - (32 * count(validator_balance{job=\"validator\"} > 16)) +\t(32 * count(validator_balance{job=\"validator\"} offset 30d > 16)))/(32 * avg_over_time(count(validator_balance{job=\"validator\"} > 16)[30d:]))) * (365/30)",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "annualized monthly return",
+          "refId": "B"
+        }
+      ],
+      "title": "Monthly Return, Annualized",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
+      },
       "description": "validator stats by public key over the lifetime of the validator process ",
       "fieldConfig": {
         "defaults": {
@@ -2844,16 +3609,15 @@
           {
             "matcher": {
               "id": "byName",
-              "options": "job"
+              "options": "pubkey"
             },
             "properties": [
               {
                 "id": "unit",
-                "value": "short"
+                "value": "string"
               },
               {
-                "id": "decimals",
-                "value": 2
+                "id": "decimals"
               },
               {
                 "id": "custom.align"
@@ -2872,11 +3636,10 @@
               },
               {
                 "id": "unit",
-                "value": "short"
+                "value": "string"
               },
               {
-                "id": "decimals",
-                "value": 2
+                "id": "decimals"
               },
               {
                 "id": "custom.align"
@@ -3066,11 +3829,11 @@
                     },
                     {
                       "color": "#FF9830",
-                      "value": 165
+                      "value": 31
                     },
                     {
                       "color": "#73BF69",
-                      "value": 220
+                      "value": 32
                     }
                   ]
                 }
@@ -3080,7 +3843,7 @@
           {
             "matcher": {
               "id": "byName",
-              "options": "pubkey_short"
+              "options": "pubkey"
             },
             "properties": [
               {
@@ -3089,11 +3852,10 @@
               },
               {
                 "id": "unit",
-                "value": "short"
+                "value": "string"
               },
               {
-                "id": "decimals",
-                "value": 2
+                "id": "decimals"
               },
               {
                 "id": "links",
@@ -3101,7 +3863,7 @@
                   {
                     "targetBlank": true,
                     "title": "explorer",
-                    "url": "https://explorer.consensus.lukso.network/validator/${__cell_1:raw}"
+                    "url": "https://explorer.consensus.mainnet.lukso.network/validator/${__data.fields[1]}"
                   }
                 ]
               },
@@ -3162,14 +3924,86 @@
                 "id": "custom.align"
               }
             ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "public key"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 290
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "status"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 60
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "balance"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 82
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "proposed"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 59
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "attested"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 81
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "aggregated"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 94
+              }
+            ]
           }
         ]
       },
       "gridPos": {
-        "h": 10,
-        "w": 12,
+        "h": 7,
+        "w": 8,
         "x": 0,
-        "y": 10
+        "y": 12
       },
       "id": 54,
       "interval": "",
@@ -3200,7 +4034,7 @@
             "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
           },
           "editorMode": "code",
-          "expr": "label_replace(max by(pubkey) (validator_statuses{job=\"validator\"}), \"pubkey_short\", \"$1\", \"pubkey\", \"(.{10}).*\")",
+          "expr": "label_replace(max by(pubkey) (validator_statuses{job=\"validator\"}), \"pubkey\", \"$1\", \"pubkey\", \"(.{100}).*\")",
           "format": "table",
           "instant": true,
           "interval": "",
@@ -3213,7 +4047,7 @@
             "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
           },
           "editorMode": "code",
-          "expr": "label_replace(max by(pubkey) (validator_balance{job=\"validator\"}), \"pubkey_short\", \"$1\", \"pubkey\", \"(.{10}).*\")",
+          "expr": "label_replace(max by(pubkey) (validator_balance{job=\"validator\"}), \"pubkey\", \"$1\", \"pubkey\", \"(.{100}).*\")",
           "format": "table",
           "instant": true,
           "interval": "",
@@ -3226,7 +4060,7 @@
             "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
           },
           "editorMode": "code",
-          "expr": "label_replace(max by(pubkey) (validator_successful_proposals{job=\"validator-client-job\"}), \"pubkey_short\", \"$1\", \"pubkey\", \"(.{10}).*\")  ",
+          "expr": "label_replace(max by(pubkey) (validator_successful_proposals{job=\"validator\"}), \"pubkey\", \"$1\", \"pubkey\", \"(.{100}).*\")  ",
           "format": "table",
           "instant": true,
           "interval": "",
@@ -3238,7 +4072,8 @@
             "type": "prometheus",
             "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
           },
-          "expr": "label_replace(max by(pubkey) (validator_successful_attestations{job=\"validator-client-job\"}), \"pubkey_short\", \"$1\", \"pubkey\", \"(.{10}).*\")  ",
+          "editorMode": "code",
+          "expr": "label_replace(max by(pubkey) (validator_successful_attestations{job=\"validator\"}), \"pubkey\", \"$1\", \"pubkey\", \"(.{100}).*\")  ",
           "format": "table",
           "instant": true,
           "interval": "",
@@ -3251,7 +4086,7 @@
             "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
           },
           "editorMode": "code",
-          "expr": "label_replace(max by(pubkey) (validator_successful_aggregations{job=\"validator-client-job\"}), \"pubkey_short\", \"$1\", \"pubkey\", \"(.{10}).*\") ",
+          "expr": "label_replace(max by(pubkey) (validator_successful_aggregations{job=\"validator\"}), \"pubkey\", \"$1\", \"pubkey\", \"(.{100}).*\") ",
           "format": "table",
           "instant": true,
           "interval": "",
@@ -3263,7 +4098,8 @@
             "type": "prometheus",
             "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
           },
-          "expr": "label_replace(max by(pubkey) (validator_failed_attestations{job=\"validator-client-job\"}), \"pubkey_short\", \"$1\", \"pubkey\", \"(.{10}).*\") ",
+          "editorMode": "code",
+          "expr": "label_replace(max by(pubkey) (validator_failed_attestations{job=\"validator\"}), \"pubkey\", \"$1\", \"pubkey\", \"(.{100}).*\") ",
           "format": "table",
           "instant": true,
           "interval": "",
@@ -3275,7 +4111,8 @@
             "type": "prometheus",
             "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
           },
-          "expr": "label_replace(max by(pubkey) (validator_failed_aggregations{job=\"validator-client-job\"}), \"pubkey_short\", \"$1\", \"pubkey\", \"(.{10}).*\") ",
+          "editorMode": "code",
+          "expr": "label_replace(max by(pubkey) (validator_failed_aggregations{job=\"validator\"}), \"pubkey\", \"$1\", \"pubkey\", \"(.{100}).*\") ",
           "format": "table",
           "instant": true,
           "interval": "",
@@ -3287,7 +4124,8 @@
             "type": "prometheus",
             "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
           },
-          "expr": "label_replace(max by(pubkey) (validator_inactivity_score{job=\"validator-client-job\"}), \"pubkey_short\", \"$1\", \"pubkey\", \"(.{10}).*\")  ",
+          "editorMode": "code",
+          "expr": "label_replace(max by(pubkey) (validator_inactivity_score{job=\"validator\"}), \"pubkey\", \"$1\", \"pubkey\", \"(.{100}).*\")  ",
           "format": "table",
           "instant": true,
           "interval": "",
@@ -3370,18 +4208,17 @@
       },
       "gridPos": {
         "h": 7,
-        "w": 6,
-        "x": 12,
+        "w": 4,
+        "x": 8,
         "y": 12
       },
       "id": 5,
       "options": {
         "legend": {
           "calcs": [
-            "mean",
-            "lastNotNull",
             "max",
-            "sum"
+            "sum",
+            "last"
           ],
           "displayMode": "table",
           "placement": "bottom",
@@ -3552,16 +4389,16 @@
       },
       "gridPos": {
         "h": 7,
-        "w": 6,
-        "x": 18,
+        "w": 4,
+        "x": 12,
         "y": 12
       },
       "id": 99,
       "options": {
         "legend": {
           "calcs": [
-            "min",
             "max",
+            "min",
             "last"
           ],
           "displayMode": "table",
@@ -3599,6 +4436,198 @@
         }
       ],
       "title": "Client Memory Usage",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
+      },
+      "description": "Memory usage on the server",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 40,
+            "gradientMode": "opacity",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "never",
+            "spanNulls": true,
+            "stacking": {
+              "group": "A",
+              "mode": "normal"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "links": [],
+          "mappings": [],
+          "max": 16,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "decgbytes"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Free"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "rgb(51, 51, 51)",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "beacon memory"
+            },
+            "properties": [
+              {
+                "id": "custom.fillOpacity",
+                "value": 0
+              },
+              {
+                "id": "custom.stacking",
+                "value": {
+                  "group": false,
+                  "mode": "normal"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "validator memory"
+            },
+            "properties": [
+              {
+                "id": "custom.fillOpacity",
+                "value": 0
+              },
+              {
+                "id": "custom.stacking",
+                "value": {
+                  "group": false,
+                  "mode": "normal"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 8,
+        "x": 16,
+        "y": 16
+      },
+      "id": 109,
+      "options": {
+        "legend": {
+          "calcs": [
+            "max",
+            "min",
+            "last"
+          ],
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "pluginVersion": "9.5.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
+          },
+          "editorMode": "code",
+          "expr": "node_memory_MemTotal_bytes{instance=\"localhost:9100\", job=\"node\"}",
+          "hide": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "B"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
+          },
+          "editorMode": "code",
+          "expr": "node_memory_MemAvailable_bytes{instance=\"localhost:9100\", job=\"node\"}",
+          "hide": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "C"
+        }
+      ],
+      "title": "Server Memory Usage",
+      "transformations": [
+        {
+          "id": "calculateField",
+          "options": {
+            "alias": "Memory Used",
+            "binary": {
+              "left": "{__name__=\"node_memory_MemTotal_bytes\", instance=\"localhost:9100\", job=\"node\"}",
+              "operator": "/",
+              "reducer": "sum",
+              "right": "{__name__=\"node_memory_MemAvailable_bytes\", instance=\"localhost:9100\", job=\"node\"}"
+            },
+            "mode": "binary",
+            "reduce": {
+              "include": [
+                "{__name__=\"node_memory_MemTotal_bytes\", instance=\"localhost:9100\", job=\"node\"}",
+                "{__name__=\"node_memory_MemAvailable_bytes\", instance=\"localhost:9100\", job=\"node\"}"
+              ],
+              "reducer": "sum"
+            },
+            "replaceFields": true
+          }
+        }
+      ],
       "type": "timeseries"
     },
     {
@@ -3663,9 +4692,9 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 7,
-        "w": 12,
-        "x": 12,
+        "h": 6,
+        "w": 16,
+        "x": 0,
         "y": 19
       },
       "id": 14,
@@ -3717,467 +4746,6 @@
       ],
       "title": "Network Traffic",
       "type": "timeseries"
-    },
-    {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "mappings": [
-            {
-              "options": {
-                "1": {
-                  "text": ""
-                }
-              },
-              "type": "value"
-            },
-            {
-              "options": {
-                "match": "null",
-                "result": {
-                  "text": ""
-                }
-              },
-              "type": "special"
-            }
-          ],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "rgb(105, 70, 0)",
-                "value": null
-              },
-              {
-                "color": "rgb(105, 70, 0)",
-                "value": 0
-              },
-              {
-                "color": "rgb(105, 70, 0)",
-                "value": 0
-              }
-            ]
-          },
-          "unit": "none"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 1,
-        "w": 12,
-        "x": 0,
-        "y": 20
-      },
-      "id": 58,
-      "links": [],
-      "maxDataPoints": 100,
-      "options": {
-        "colorMode": "background",
-        "graphMode": "none",
-        "justifyMode": "auto",
-        "orientation": "horizontal",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "textMode": "auto"
-      },
-      "pluginVersion": "9.5.1",
-      "targets": [
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
-          },
-          "expr": "1",
-          "interval": "",
-          "legendFormat": "",
-          "refId": "A"
-        }
-      ],
-      "title": "Server",
-      "type": "stat"
-    },
-    {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
-      },
-      "description": "CPU usage on the server",
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "palette-classic"
-          },
-          "custom": {
-            "axisCenteredZero": false,
-            "axisColorMode": "text",
-            "axisLabel": "",
-            "axisPlacement": "auto",
-            "barAlignment": 0,
-            "drawStyle": "line",
-            "fillOpacity": 40,
-            "gradientMode": "opacity",
-            "hideFrom": {
-              "legend": false,
-              "tooltip": false,
-              "viz": false
-            },
-            "lineInterpolation": "linear",
-            "lineWidth": 1,
-            "pointSize": 5,
-            "scaleDistribution": {
-              "type": "linear"
-            },
-            "showPoints": "never",
-            "spanNulls": true,
-            "stacking": {
-              "group": "A",
-              "mode": "normal"
-            },
-            "thresholdsStyle": {
-              "mode": "off"
-            }
-          },
-          "links": [],
-          "mappings": [],
-          "min": 0,
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              },
-              {
-                "color": "red",
-                "value": 80
-              }
-            ]
-          },
-          "unit": "rothz"
-        },
-        "overrides": [
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "Free"
-            },
-            "properties": [
-              {
-                "id": "color",
-                "value": {
-                  "fixedColor": "rgb(51, 51, 51)",
-                  "mode": "fixed"
-                }
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "beacon memory"
-            },
-            "properties": [
-              {
-                "id": "custom.fillOpacity",
-                "value": 0
-              },
-              {
-                "id": "custom.stacking",
-                "value": {
-                  "group": false,
-                  "mode": "normal"
-                }
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "validator memory"
-            },
-            "properties": [
-              {
-                "id": "custom.fillOpacity",
-                "value": 0
-              },
-              {
-                "id": "custom.stacking",
-                "value": {
-                  "group": false,
-                  "mode": "normal"
-                }
-              }
-            ]
-          }
-        ]
-      },
-      "gridPos": {
-        "h": 6,
-        "w": 6,
-        "x": 0,
-        "y": 21
-      },
-      "id": 17,
-      "options": {
-        "legend": {
-          "calcs": [
-            "max",
-            "min",
-            "last"
-          ],
-          "displayMode": "table",
-          "placement": "bottom",
-          "showLegend": true
-        },
-        "tooltip": {
-          "mode": "multi",
-          "sort": "desc"
-        }
-      },
-      "pluginVersion": "9.5.1",
-      "targets": [
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
-          },
-          "editorMode": "code",
-          "expr": "node_cpu_scaling_frequency_hertz{cpu=\"0\", instance=\"localhost:9100\", job=\"node\"}",
-          "interval": "",
-          "intervalFactor": 1,
-          "legendFormat": "CPU",
-          "range": true,
-          "refId": "A"
-        }
-      ],
-      "timeFrom": "1h",
-      "title": "CPU Usage",
-      "type": "timeseries"
-    },
-    {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
-      },
-      "description": "Current CPU Temperature ",
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "palette-classic"
-          },
-          "custom": {
-            "axisCenteredZero": false,
-            "axisColorMode": "text",
-            "axisLabel": "",
-            "axisPlacement": "auto",
-            "barAlignment": 0,
-            "drawStyle": "line",
-            "fillOpacity": 0,
-            "gradientMode": "none",
-            "hideFrom": {
-              "legend": false,
-              "tooltip": false,
-              "viz": false
-            },
-            "lineInterpolation": "smooth",
-            "lineStyle": {
-              "fill": "solid"
-            },
-            "lineWidth": 1,
-            "pointSize": 5,
-            "scaleDistribution": {
-              "type": "linear"
-            },
-            "showPoints": "auto",
-            "spanNulls": false,
-            "stacking": {
-              "group": "A",
-              "mode": "none"
-            },
-            "thresholdsStyle": {
-              "mode": "off"
-            }
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              },
-              {
-                "color": "red",
-                "value": 80
-              }
-            ]
-          },
-          "unit": "celsius"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 6,
-        "w": 6,
-        "x": 6,
-        "y": 21
-      },
-      "id": 90,
-      "options": {
-        "legend": {
-          "calcs": [
-            "min",
-            "max",
-            "last"
-          ],
-          "displayMode": "table",
-          "placement": "bottom",
-          "showLegend": true
-        },
-        "tooltip": {
-          "mode": "single",
-          "sort": "desc"
-        }
-      },
-      "pluginVersion": "9.5.1",
-      "targets": [
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
-          },
-          "editorMode": "code",
-          "expr": "node_hwmon_temp_celsius{chip=\"platform_coretemp_0\", instance=\"localhost:9100\", job=\"node\", sensor=\"temp4\"}",
-          "interval": "",
-          "intervalFactor": 1,
-          "legendFormat": "CPU Temp",
-          "range": true,
-          "refId": "A"
-        }
-      ],
-      "title": "CPU Temp",
-      "type": "timeseries"
-    },
-    {
-      "aliasColors": {},
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": {
-        "type": "prometheus",
-        "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "links": []
-        },
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 4,
-      "gridPos": {
-        "h": 7,
-        "w": 12,
-        "x": 12,
-        "y": 26
-      },
-      "hiddenSeries": false,
-      "id": 111,
-      "legend": {
-        "alignAsTable": true,
-        "avg": true,
-        "current": true,
-        "hideEmpty": true,
-        "hideZero": true,
-        "max": true,
-        "min": true,
-        "show": true,
-        "total": false,
-        "values": true
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "9.5.1",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
-          },
-          "exemplar": true,
-          "expr": "probe_duration_seconds{job=\"google-ping-job\"}",
-          "interval": "",
-          "intervalFactor": 10,
-          "legendFormat": "google",
-          "refId": "A"
-        },
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
-          },
-          "expr": "probe_duration_seconds{job=\"cloudflare-ping-job\"}",
-          "interval": "",
-          "intervalFactor": 10,
-          "legendFormat": "cloudflare",
-          "refId": "B"
-        }
-      ],
-      "thresholds": [],
-      "timeRegions": [],
-      "title": "Ping",
-      "tooltip": {
-        "shared": true,
-        "sort": 1,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "mode": "time",
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "$$hashKey": "object:151",
-          "format": "s",
-          "logBase": 1,
-          "min": "0",
-          "show": true
-        },
-        {
-          "$$hashKey": "object:152",
-          "format": "short",
-          "logBase": 1,
-          "show": false
-        }
-      ],
-      "yaxis": {
-        "align": false
-      }
     },
     {
       "datasource": {
@@ -4295,10 +4863,10 @@
         ]
       },
       "gridPos": {
-        "h": 6,
-        "w": 6,
-        "x": 0,
-        "y": 27
+        "h": 7,
+        "w": 8,
+        "x": 16,
+        "y": 24
       },
       "id": 110,
       "options": {
@@ -4335,159 +4903,114 @@
       "type": "timeseries"
     },
     {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
       "datasource": {
         "type": "prometheus",
         "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
       },
-      "description": "Memory usage on the server",
       "fieldConfig": {
         "defaults": {
-          "color": {
-            "mode": "palette-classic"
-          },
-          "custom": {
-            "axisCenteredZero": false,
-            "axisColorMode": "text",
-            "axisLabel": "",
-            "axisPlacement": "auto",
-            "barAlignment": 0,
-            "drawStyle": "line",
-            "fillOpacity": 40,
-            "gradientMode": "opacity",
-            "hideFrom": {
-              "legend": false,
-              "tooltip": false,
-              "viz": false
-            },
-            "lineInterpolation": "linear",
-            "lineWidth": 1,
-            "pointSize": 5,
-            "scaleDistribution": {
-              "type": "linear"
-            },
-            "showPoints": "never",
-            "spanNulls": true,
-            "stacking": {
-              "group": "A",
-              "mode": "normal"
-            },
-            "thresholdsStyle": {
-              "mode": "off"
-            }
-          },
-          "links": [],
-          "mappings": [],
-          "min": 0,
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              },
-              {
-                "color": "red",
-                "value": 80
-              }
-            ]
-          },
-          "unit": "decbytes"
+          "links": []
         },
-        "overrides": [
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "Free"
-            },
-            "properties": [
-              {
-                "id": "color",
-                "value": {
-                  "fixedColor": "rgb(51, 51, 51)",
-                  "mode": "fixed"
-                }
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "beacon memory"
-            },
-            "properties": [
-              {
-                "id": "custom.fillOpacity",
-                "value": 0
-              },
-              {
-                "id": "custom.stacking",
-                "value": {
-                  "group": false,
-                  "mode": "normal"
-                }
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "validator memory"
-            },
-            "properties": [
-              {
-                "id": "custom.fillOpacity",
-                "value": 0
-              },
-              {
-                "id": "custom.stacking",
-                "value": {
-                  "group": false,
-                  "mode": "normal"
-                }
-              }
-            ]
-          }
-        ]
+        "overrides": []
       },
+      "fill": 1,
+      "fillGradient": 4,
       "gridPos": {
         "h": 6,
-        "w": 6,
-        "x": 6,
-        "y": 27
+        "w": 16,
+        "x": 0,
+        "y": 25
       },
-      "id": 109,
+      "hiddenSeries": false,
+      "id": 111,
+      "legend": {
+        "alignAsTable": true,
+        "avg": true,
+        "current": true,
+        "hideEmpty": true,
+        "hideZero": true,
+        "max": true,
+        "min": true,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
       "options": {
-        "legend": {
-          "calcs": [
-            "last"
-          ],
-          "displayMode": "table",
-          "placement": "bottom",
-          "showLegend": true
-        },
-        "tooltip": {
-          "mode": "multi",
-          "sort": "desc"
-        }
+        "alertThreshold": true
       },
+      "percentage": false,
       "pluginVersion": "9.5.1",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
       "targets": [
         {
           "datasource": {
             "type": "prometheus",
             "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
           },
-          "editorMode": "code",
-          "expr": "node_memory_Active_bytes{instance=\"localhost:9100\", job=\"node\"}",
+          "exemplar": true,
+          "expr": "probe_duration_seconds{job=\"google-ping-job\"}",
           "interval": "",
-          "intervalFactor": 1,
-          "legendFormat": "Memory Used:",
-          "range": true,
+          "intervalFactor": 10,
+          "legendFormat": "google",
           "refId": "A"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
+          },
+          "expr": "probe_duration_seconds{job=\"cloudflare-ping-job\"}",
+          "interval": "",
+          "intervalFactor": 10,
+          "legendFormat": "cloudflare",
+          "refId": "B"
         }
       ],
-      "title": "Server Memory Usage",
-      "type": "timeseries"
+      "thresholds": [],
+      "timeRegions": [],
+      "title": "Ping",
+      "tooltip": {
+        "shared": true,
+        "sort": 1,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "mode": "time",
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:151",
+          "format": "s",
+          "logBase": 1,
+          "min": "0",
+          "show": true
+        },
+        {
+          "$$hashKey": "object:152",
+          "format": "short",
+          "logBase": 1,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false
+      }
     }
   ],
   "refresh": "",
@@ -4515,8 +5038,8 @@
     ]
   },
   "timezone": "",
-  "title": "Lukso Validator",
+  "title": "Lukso Validator2",
   "uid": "aaea9e00-8d49-44a0-ae1b-8d0f3927c157",
-  "version": 65,
+  "version": 77,
   "weekStart": ""
 }
