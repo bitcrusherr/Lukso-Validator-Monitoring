@@ -26,6 +26,7 @@ sudo apt install wget make git apt-transport-https software-properties-common gn
 echo 
 read -p "Install Promethues? (y = yes / n = no): " Y_N
 while [ "$Y_N" = "y" ]; do
+prometheus="y"
 echo "installing Promethues"
 sudo wget https://github.com/prometheus/prometheus/releases/download/v2.44.0/prometheus-2.44.0.linux-amd64.tar.gz --directory-prefix "/home/$logname"
 sudo tar xvfz /home/$logname/prometheus-2.44.0.linux-amd64.tar.gz
@@ -36,6 +37,7 @@ done
 echo 
 read -p "Install Grafana? (y = yes / n = no): " Y_N
 while [ "$Y_N" = "y" ]; do
+grafana="y"
 echo "installing Grafana"
 sudo apt-get install -y apt-transport-https
 sudo apt-get install -y software-properties-common wget
@@ -50,6 +52,7 @@ echo
 read -p "Install node-exporter? (y = yes / n = no): " Y_N
 while [ "$Y_N" = "y" ]; do
 echo "installing node-exporter"
+node-exporter="y"
 sudo wget https://github.com/prometheus/node_exporter/releases/download/v1.5.0/node_exporter-1.5.0.linux-386.tar.gz --directory-prefix "/home/$logname"
 sudo tar xvfz /home/$logname/node_exporter-1.5.0.linux-386.tar.gz
 sudo rm node_exporter-1.5.0.linux-386.tar.gz
@@ -60,6 +63,7 @@ echo
 read -p "Install JSON-exporter? (y = yes / n = no): " Y_N
 while [ "$Y_N" = "y" ]; do
 echo "insalling JSON-exporter"
+json-exporter="y"
 sudo wget https://dl.google.com/go/go1.20.4.linux-amd64.tar.gz --directory-prefix "/home/$logname/"
 sudo tar xfv /home/$logname/go1.20.4.linux-amd64.tar.gz
 sudo mv /home/$logname/go /usr/local/go-1.20.4
@@ -81,6 +85,7 @@ echo
 read -p "Install BlackBox-exporter? (y = yes / n = no): " Y_N
 while [ "$Y_N" = "y" ]; do
 echo "installing BlackBox-exporter"
+blackbox-exporter="y"
 sudo wget https://github.com/prometheus/blackbox_exporter/releases/download/v0.23.0/blackbox_exporter-0.23.0.linux-amd64.tar.gz --directory-prefix "/home/$logname"
 sudo tar xvfz /home/$logname/blackbox_exporter-0.23.0.linux-amd64.tar.gz
 sudo rm blackbox_exporter-0.23.0.linux-amd64.tar.gz
@@ -91,6 +96,27 @@ fi
 sudo mkdir /etc/blackbox_exporter/
 sudo printf "modules:\n  icmp:\n    prober: icmp\n    timeout: 10s\n    icmp:\n      preferred_ip_protocol: ipv4" >> /etc/blackbox_exporter/blackbox.yaml
 Y_N=n
+done
+
+echo
+echo "Creating system services"
+echo
+sleep 1s
+
+while [ "prometheus" = "y"]; do
+sudo printf "[Unit]\nDescription=prometheus\n\n[Service]\nExecStart=/home/$logname/prometheus-2.44.0.linux-amd64\prometheusn\n[Install]\nWantedBy=multi-user.target" >> /etc/systemd/system/prometheus.service
+done
+
+while [ "node-exporter" = "y"]; do
+sudo printf "[Unit]\nDescription=node-exporter\n\n[Service]\nExecStart=/home/$logname/node_exporter-1.5.0.linux-386\node_exporter\n[Install]\nWantedBy=multi-user.target" >> /etc/systemd/system/node-exporter.service
+done
+
+while [ "json-exporter" = "y"]; do
+sudo printf "[Unit]\nDescription=json-exporter\n\n[Service]\nExecStart=/home/$logname/json_exporter\json_exporter --config.file=/etc/json_exporter/json_exporter.yaml\n[Install]\nWantedBy=multi-user.target" >> /etc/systemd/system/json-exporter.service
+done
+
+while [ "blackbox-exporter" = "y"]; do
+sudo printf "[Unit]\nDescription=blackbox-exporter\n\n[Service]\nExecStart=/home/$logname/blackbox_exporter-0.23.0.linux-amd64/blackbox_exporter\n[Install]\nWantedBy=multi-user.target" >> /etc/systemd/system/blackbox-exporter.service
 done
 
 echo $green
