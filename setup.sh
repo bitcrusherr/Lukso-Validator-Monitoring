@@ -144,3 +144,5 @@ echo $nocolor
 echo
 echo "Finished, follow install instructions on github for remaining steps"
 echo 
+
+sudo rm setup.sh
