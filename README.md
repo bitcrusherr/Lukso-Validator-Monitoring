@@ -2,7 +2,7 @@
 
 
 Monitor your lukso validator using a few apps put together and using a prebuilt modified grafana dashboard!
-for linux systems
+linux systems only
 
 Run setup.sh to install but not fully configure the following services / applications:
 
