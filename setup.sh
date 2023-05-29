@@ -3,6 +3,7 @@ green='\033[0;32m'
 PINK="\033[35m"
 nocolor='\033[0m'
 logname=$(logname)
+skipquestions=n
 echo $green
 echo -----------------------------------------------------------
 echo
@@ -28,14 +29,17 @@ read -p "Install all? (y = yes / n = no): " Y_N
 while [ "$Y_N" = "y" ]; do
 echo "doing"
 installall=y
+skipquestions=y
 Y_N=n
 done
 
 #Key tools needed
 sudo apt install wget make git apt-transport-https software-properties-common gnupg2
 
-echo 
+echo
+while -p [ "skipquestions" = "n" ]; do
 read -p "Install Promethues? (y = yes / n = no): " Y_N
+done
 while [ "$Y_N" = "y" || "$installall" = "y" ]; do
 prometheus="y"
 echo "installing Promethues"
@@ -46,7 +50,9 @@ Y_N=n
 done
 
 echo 
+while -p [ "skipquestions" = "n" ]; do
 read -p "Install Grafana? (y = yes / n = no): " Y_N
+do
 while [ "$Y_N" = "y" ]; do
 grafana="y"
 echo "installing Grafana"
@@ -60,7 +66,9 @@ Y_N=n
 done
 
 echo
+while -p [ "skipquestions" = "n" ]; do
 read -p "Install node-exporter? (y = yes / n = no): " Y_N
+do
 while [ "$Y_N" = "y" ]; do
 echo "installing node-exporter"
 node-exporter="y"
@@ -71,7 +79,9 @@ Y_N=n
 done
 
 echo
+while -p [ "skipquestions" = "n" ]; do
 read -p "Install JSON-exporter? (y = yes / n = no): " Y_N
+done
 while [ "$Y_N" = "y" ]; do
 echo "insalling JSON-exporter"
 json-exporter="y"
@@ -93,7 +103,9 @@ Y_N=n
 done
 
 echo
+while -p [ "skipquestions" = "n" ]; do
 read -p "Install BlackBox-exporter? (y = yes / n = no): " Y_N
+done
 while [ "$Y_N" = "y" ]; do
 echo "installing BlackBox-exporter"
 blackbox-exporter="y"
