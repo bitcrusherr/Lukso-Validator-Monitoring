@@ -28,6 +28,7 @@ read -p "Install all? (y = yes / n = no): " Y_N
 while [ "$Y_N" = "y" ]; do
 echo "doing"
 installall="y"
+Y_N=n
 done
 
 #Key tools needed
