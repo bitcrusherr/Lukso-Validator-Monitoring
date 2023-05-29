@@ -20,11 +20,9 @@ Blackbox_Exporter
 
 1 - Run setup.sh and follow on screen instructions (sudo wget https://raw.githubusercontent.com/bitcrusherr/Lukso-Validator-Monitoring/main/setup.sh && sudo sh setup.sh) Without brackets
 
-2 - You will need to edit Promethue.yml and add to the scrape configs (Check promethues.yml here for the data to input into your .yml file)
+2 - Import the dashboard.json to grafana
 
-3 - Import the dashboard.json to grafana
-
-4 - Start all services / applications and check to see if its all working (if not see trouble shooting below)
+3 - Start all services / applications and check to see if its all working (if not see trouble shooting below)
 
 starting of services / applications at this stage is manual as they havent been setup as system services
 
