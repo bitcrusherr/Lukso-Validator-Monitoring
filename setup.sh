@@ -13,12 +13,6 @@ echo $PINK
 echo
 echo "welcome $logname."
 echo
-echo "Note, this isnt 100% my work this is just gathering everything"
-echo "togehtor in one package to hopefully make it easier for everyone"
-echo "any problems please contact me on discord Bitcrushe#4049 with"
-echo "problems or fixes thanks."
-echo
-echo
 echo "Can install following:"
 echo
 echo "Prometheus"
@@ -112,6 +106,11 @@ sudo mkdir /etc/blackbox_exporter/
 sudo printf "modules:\n  icmp:\n    prober: icmp\n    timeout: 10s\n    icmp:\n      preferred_ip_protocol: ipv4" >> /etc/blackbox_exporter/blackbox.yaml
 Y_N=n
 done
+
+if [ -f "/home/$logname/prometheus-2.44.0.linux-amd64/promethues.yml" ];then
+	sudo mv promethues.yml.old
+fi
+sudo wget https://raw.githubusercontent.com/bitcrusherr/Lukso-Validator-Monitoring/main/promethues.yml --directory-prefix "/home/$logname/prometheus-2.44.0.linux-amd64"
 
 echo
 echo "Creating system services"
