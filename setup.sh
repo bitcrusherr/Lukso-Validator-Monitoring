@@ -18,14 +18,29 @@ echo "togehtor in one package to hopefully make it easier for everyone"
 echo "any problems please contact me on discord Bitcrushe#4049 with"
 echo "problems or fixes thanks."
 echo
+echo
+echo "Can install following:"
+echo
+echo "Prometheus"
+echo "Grafana"
+echo "Node-exporter"
+echo "json-exporter"
+echo "blackbox-exporter"
+echo
 read -p "Press Enter to continue....." enter
 
 #Key tools needed
 sudo apt install wget make git apt-transport-https software-properties-common gnupg2
 
 echo 
-read -p "Install Promethues? (y = yes / n = no): " Y_N
+read -p "Install all? (y = yes / n = no): " Y_N
 while [ "$Y_N" = "y" ]; do
+installall="y"
+done
+
+echo 
+read -p "Install Promethues? (y = yes / n = no): " Y_N
+while [ "$Y_N" = "y" ] && [ "$installall" = "y" ]; do
 prometheus="y"
 echo "installing Promethues"
 sudo wget https://github.com/prometheus/prometheus/releases/download/v2.44.0/prometheus-2.44.0.linux-amd64.tar.gz --directory-prefix "/home/$logname"
