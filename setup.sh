@@ -34,7 +34,7 @@ sudo apt install wget make git apt-transport-https software-properties-common gn
 
 echo 
 read -p "Install Promethues? (y = yes / n = no): " Y_N
-while [ "$Y_N" = "y" ] || [ "$installall" = "y" ]; do
+while [ "$Y_N" = "y" || "$installall" = "y" ]; do
 prometheus="y"
 echo "installing Promethues"
 sudo wget https://github.com/prometheus/prometheus/releases/download/v2.44.0/prometheus-2.44.0.linux-amd64.tar.gz --directory-prefix "/home/$logname"
