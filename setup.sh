@@ -37,7 +37,7 @@ done
 sudo apt install wget make git apt-transport-https software-properties-common gnupg2
 
 echo
-while -p [ "skipquestions" = "n" ]; do
+while -p [ "$skipquestions" = "n" ]; do
 read -p "Install Promethues? (y = yes / n = no): " Y_N
 done
 while [ "$Y_N" = "y" || "$installall" = "y" ]; do
@@ -50,7 +50,7 @@ Y_N=n
 done
 
 echo 
-while -p [ "skipquestions" = "n" ]; do
+while -p [ "$skipquestions" = "n" ]; do
 read -p "Install Grafana? (y = yes / n = no): " Y_N
 do
 while [ "$Y_N" = "y" ]; do
@@ -66,7 +66,7 @@ Y_N=n
 done
 
 echo
-while -p [ "skipquestions" = "n" ]; do
+while -p [ "$skipquestions" = "n" ]; do
 read -p "Install node-exporter? (y = yes / n = no): " Y_N
 do
 while [ "$Y_N" = "y" ]; do
@@ -79,7 +79,7 @@ Y_N=n
 done
 
 echo
-while -p [ "skipquestions" = "n" ]; do
+while -p [ "$skipquestions" = "n" ]; do
 read -p "Install JSON-exporter? (y = yes / n = no): " Y_N
 done
 while [ "$Y_N" = "y" ]; do
@@ -103,7 +103,7 @@ Y_N=n
 done
 
 echo
-while -p [ "skipquestions" = "n" ]; do
+while -p [ "$skipquestions" = "n" ]; do
 read -p "Install BlackBox-exporter? (y = yes / n = no): " Y_N
 done
 while [ "$Y_N" = "y" ]; do
