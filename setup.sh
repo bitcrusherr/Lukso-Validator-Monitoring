@@ -41,9 +41,7 @@ Y_N=n
 done
 
 echo 
-while -p [ "$skipquestions" = "n" ]; do
 read -p "Install Grafana? (y = yes / n = no): " Y_N
-do
 while [ "$Y_N" = "y" ]; do
 grafana="y"
 echo "installing Grafana"
@@ -57,9 +55,7 @@ Y_N=n
 done
 
 echo
-while -p [ "$skipquestions" = "n" ]; do
 read -p "Install node-exporter? (y = yes / n = no): " Y_N
-do
 while [ "$Y_N" = "y" ]; do
 echo "installing node-exporter"
 node-exporter="y"
@@ -70,9 +66,7 @@ Y_N=n
 done
 
 echo
-while -p [ "$skipquestions" = "n" ]; do
 read -p "Install JSON-exporter? (y = yes / n = no): " Y_N
-done
 while [ "$Y_N" = "y" ]; do
 echo "insalling JSON-exporter"
 json-exporter="y"
@@ -94,9 +88,7 @@ Y_N=n
 done
 
 echo
-while -p [ "$skipquestions" = "n" ]; do
 read -p "Install BlackBox-exporter? (y = yes / n = no): " Y_N
-done
 while [ "$Y_N" = "y" ]; do
 echo "installing BlackBox-exporter"
 blackbox-exporter="y"
