@@ -24,15 +24,6 @@ echo "blackbox-exporter"
 echo
 read -p "Press Enter to continue....." enter
 
-echo 
-read -p "Install all? (y = yes / n = no): " Y_N
-while [ "$Y_N" = "y" ]; do
-echo "doing"
-installall=y
-skipquestions=y
-Y_N=n
-done
-
 #Key tools needed
 sudo apt install wget make git apt-transport-https software-properties-common gnupg2
 
