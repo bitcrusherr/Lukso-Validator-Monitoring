@@ -6,7 +6,7 @@ logname=$(logname)
 echo $green
 echo -----------------------------------------------------------
 echo
-echo           "Bitcrusher's Dash Install v0.01"
+echo           "Bitcrusher's Dash Install v0.02"
 echo
 echo -----------------------------------------------------------
 echo $PINK
@@ -35,7 +35,7 @@ sudo wget https://github.com/prometheus/prometheus/releases/download/v2.44.0/pro
 sudo tar xvfz /home/$logname/prometheus-2.44.0.linux-amd64.tar.gz
 sudo rm prometheus-2.44.0.linux-amd64.tar.gz
 echo
-echo "Creating system services"
+echo "Creating system service"
 echo
 sleep 1s
 sudo printf "[Unit]\nDescription=prometheus\n\n[Service]\nExecStart=/home/$logname/prometheus-2.44.0.linux-amd64\prometheusn\n[Install]\nWantedBy=multi-user.target" >> /etc/systemd/system/prometheus.service
@@ -65,7 +65,7 @@ sudo wget https://github.com/prometheus/node_exporter/releases/download/v1.5.0/n
 sudo tar xvfz /home/$logname/node_exporter-1.5.0.linux-386.tar.gz
 sudo rm node_exporter-1.5.0.linux-386.tar.gz
 echo
-echo "Creating system services"
+echo "Creating system service"
 echo
 sleep 1s
 sudo printf "[Unit]\nDescription=node-exporter\n\n[Service]\nExecStart=/home/$logname/node_exporter-1.5.0.linux-386\node_exporter\n[Install]\nWantedBy=multi-user.target" >> /etc/systemd/system/node-exporter.service
@@ -92,7 +92,7 @@ fi
 sudo mkdir /etc/json_exporter/
 sudo printf "modules:\n  default:\n    metrics:\n    - name: lyxeur\n      path: \"{.lukso-token.usd}\"\n      help: LUKSO (LYX) Price in USD" >> /etc/json_exporter/json_exporter.yaml
 echo
-echo "Creating system services"
+echo "Creating system service"
 echo
 sleep 1s
 sudo printf "[Unit]\nDescription=json-exporter\n\n[Service]\nExecStart=/home/$logname/json_exporter\json_exporter --config.file=/etc/json_exporter/json_exporter.yaml\n[Install]\nWantedBy=multi-user.target" >> /etc/systemd/system/json-exporter.service
@@ -114,7 +114,7 @@ fi
 sudo mkdir /etc/blackbox_exporter/
 sudo printf "modules:\n  icmp:\n    prober: icmp\n    timeout: 10s\n    icmp:\n      preferred_ip_protocol: ipv4" >> /etc/blackbox_exporter/blackbox.yaml
 echo
-echo "Creating system services"
+echo "Creating system service"
 echo
 sleep 1s
 sudo printf "[Unit]\nDescription=blackbox-exporter\n\n[Service]\nExecStart=/home/$logname/blackbox_exporter-0.23.0.linux-amd64/blackbox_exporter\n[Install]\nWantedBy=multi-user.target" >> /etc/systemd/system/blackbox-exporter.service
