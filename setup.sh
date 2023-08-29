@@ -6,7 +6,7 @@ logname=$(logname)
 echo $green
 echo -----------------------------------------------------------
 echo
-echo           "Bitcrusher's Dash Install"
+echo           "Bitcrusher's Dash Install v0.01"
 echo
 echo -----------------------------------------------------------
 echo $PINK
