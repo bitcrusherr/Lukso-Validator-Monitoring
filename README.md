@@ -18,7 +18,7 @@ Blackbox_Exporter
 
 # Instructions:
 
-1 - Run setup.sh and follow on screen instructions (sudo wget https://raw.githubusercontent.com/bitcrusherr/Lukso-Validator-Monitoring/main/setup.sh && sudo sh setup.sh) Without brackets
+1 - Run setup.sh and follow on screen instructions ( sudo wget https://raw.githubusercontent.com/bitcrusherr/Lukso-Validator-Monitoring/main/setup.sh && sudo sh setup.sh ) Without brackets
 
 2 - Import the dashboard.json to grafana
 
