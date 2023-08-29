@@ -3,7 +3,6 @@ green='\033[0;32m'
 PINK="\033[35m"
 nocolor='\033[0m'
 logname=$(logname)
-skipquestions=n
 echo $green
 echo -----------------------------------------------------------
 echo
@@ -28,9 +27,7 @@ read -p "Press Enter to continue....." enter
 sudo apt install wget make git apt-transport-https software-properties-common gnupg2
 
 echo
-while -p [ "$skipquestions" = "n" ]; do
 read -p "Install Promethues? (y = yes / n = no): " Y_N
-done
 while [ "$Y_N" = "y" || "$installall" = "y" ]; do
 prometheus="y"
 echo "installing Promethues"
