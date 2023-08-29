@@ -6,7 +6,7 @@ logname=$(logname)
 echo $green
 echo -----------------------------------------------------------
 echo
-echo           "Bitcrusher's Dash Install v0.02"
+echo           "Bitcrusher's Dash Install v0.03"
 echo
 echo -----------------------------------------------------------
 echo $PINK
@@ -32,7 +32,8 @@ while [ "$Y_N" = "y" ]; do
 prometheus="y"
 echo "installing Promethues"
 sudo wget https://github.com/prometheus/prometheus/releases/download/v2.44.0/prometheus-2.44.0.linux-amd64.tar.gz --directory-prefix "/home/$logname"
-sudo tar xvfz /home/$logname/prometheus-2.44.0.linux-amd64.tar.gz -C /home/$logname/prometheus
+sudo mkdir /home/$logname/prometheus/
+sudo tar xvfz /home/$logname/prometheus-2.44.0.linux-amd64.tar.gz -C /home/$logname/prometheus/
 sudo rm prometheus-2.44.0.linux-amd64.tar.gz
 echo
 echo "Creating system service"
