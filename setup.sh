@@ -13,7 +13,7 @@ echo $PINK
 echo
 echo "welcome $logname."
 echo
-echo "Can install following:"
+echo "Following applications can be installed:"
 echo
 echo "Prometheus"
 echo "Grafana"
