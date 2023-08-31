@@ -6,7 +6,7 @@ logname=$(logname)
 echo $green
 echo -----------------------------------------------------------
 echo
-echo           "Bitcrusher's Dash Install v0.05"
+echo           "Bitcrusher's Dash Install v0.06"
 echo
 echo -----------------------------------------------------------
 echo $PINK
@@ -45,7 +45,6 @@ sudo printf "[Unit]\nDescription=prometheus\n\n[Service]\nExecStart=/home/$logna
 sudo systemctl daemon-reload
 sudo systemctl enable prometheus.service
 sudo systemctl start prometheus.service
-sudo systemctl status prometheus.service
 sleep 2s
 Y_N=n
 done
@@ -63,7 +62,6 @@ sudo apt-get update
 sudo apt-get install grafana
 sudo systemctl daemon-reload
 sudo systemctl start grafana-server
-sudo systemctl status grafana-server
 sleep 2s
 Y_N=n
 done
@@ -87,7 +85,6 @@ sudo printf "[Unit]\nDescription=node-exporter\n\n[Service]\nExecStart=/home/$lo
 sudo systemctl daemon-reload
 sudo systemctl enable node-exporter.service
 sudo systemctl start node-exporter.service
-sudo systemctl status node-exporter.service
 sleep 2s
 Y_N=n
 done
@@ -122,7 +119,6 @@ sudo printf "[Unit]\nDescription=json-exporter\n\n[Service]\nExecStart=/home/$lo
 sudo systemctl daemon-reload
 sudo systemctl enable json-exporter.service
 sudo systemctl start json-exporter.service
-sudo systemctl status json-exporter.service
 sleep 2s
 Y_N=n
 done
@@ -152,7 +148,6 @@ sudo printf "[Unit]\nDescription=blackbox-exporter\n\n[Service]\nExecStart=/home
 sudo systemctl daemon-reload
 sudo systemctl enable blackbox-exporter.service
 sudo systemctl start blackbox-exporter.service
-sudo systemctl status blackbox-exporter.service
 sleep 2s
 Y_N=n
 done
