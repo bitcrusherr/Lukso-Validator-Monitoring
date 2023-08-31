@@ -38,6 +38,9 @@ echo
 echo "Creating system service"
 echo
 sleep 1s
+if [ -f "/etc/systemd/system/prometheus.service" ];then
+	sudo rm /etc/systemd/system/prometheus.service
+fi
 sudo printf "[Unit]\nDescription=prometheus\n\n[Service]\nExecStart=/home/$logname/prometheus-2.44.0.linux-amd64/prometheus --config.file=/home/$logname/prometheus-2.44.0.linux-amd64/prometheus.yml\n[Install]\nWantedBy=multi-user.target" >> /etc/systemd/system/prometheus.service
 sudo systemctl daemon-reload
 sudo systemctl enable prometheus.service
@@ -77,7 +80,15 @@ echo
 echo "Creating system service"
 echo
 sleep 1s
+if [ -f "/etc/systemd/system/node-exporter.service" ];then
+	sudo rm /etc/systemd/system/node-exporter.service
+fi
 sudo printf "[Unit]\nDescription=node-exporter\n\n[Service]\nExecStart=/home/$logname/node_exporter-1.5.0.linux-386\node_exporter\n[Install]\nWantedBy=multi-user.target" >> /etc/systemd/system/node-exporter.service
+sudo systemctl daemon-reload
+sudo systemctl enable node-exporter.service
+sudo systemctl start node-exporter.service
+sudo systemctl status node-exporter.service
+sleep 2s
 Y_N=n
 done
 
@@ -103,6 +114,9 @@ sudo printf "modules:\n  default:\n    metrics:\n    - name: lyxeur\n      path:
 echo
 echo "Creating system service"
 echo
+if [ -f "/etc/systemd/system/json-exporter.service" ];then
+	sudo rm /etc/systemd/system/json-exporter.service
+fi
 sleep 1s
 sudo printf "[Unit]\nDescription=json-exporter\n\n[Service]\nExecStart=/home/$logname/json_exporter/json_exporter --config.file=/etc/json_exporter/json_exporter.yaml\n[Install]\nWantedBy=multi-user.target" >> /etc/systemd/system/json-exporter.service
 sudo systemctl daemon-reload
@@ -131,10 +145,13 @@ echo
 echo "Creating system service"
 echo
 sleep 1s
+if [ -f "/etc/systemd/system/blackbox-exporter.servicee" ];then
+	sudo rm /etc/systemd/system/blackbox-exporter.service
+fi
 sudo printf "[Unit]\nDescription=blackbox-exporter\n\n[Service]\nExecStart=/home/$logname/blackbox_exporter-0.23.0.linux-amd64/blackbox_exporter\n[Install]\nWantedBy=multi-user.target" >> /etc/systemd/system/blackbox-exporter.service
 sudo systemctl daemon-reload
 sudo systemctl enable blackbox-exporter.service
-sudo systemctl start jblackbox-exporter.service
+sudo systemctl start blackbox-exporter.service
 sudo systemctl status blackbox-exporter.service
 sleep 2s
 Y_N=n
