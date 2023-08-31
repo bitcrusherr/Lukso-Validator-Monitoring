@@ -22,9 +22,7 @@ Blackbox_Exporter
 
 2 - Import the dashboard.json to grafana
 
-3 - Start all services / applications and check to see if its all working (if not see trouble shooting below)
-
-starting of services / applications at this stage is manual as they havent been setup as system services
+3 - after completing install check services are running example: sudo systemctl status promethues.service
 
 # Trouble Shooting
 If you are missing information or its not displayed correctly chances are the service isnt started or
