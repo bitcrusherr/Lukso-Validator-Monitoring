@@ -111,7 +111,7 @@ if [ -d "/etc/json_exporter/" ];then
 	sudo rm /etc/json_exporter/ -r
 fi
 sudo mkdir /etc/json_exporter/
-sudo printf "modules:\n  default:\n    metrics:\n    - name: lyxeur\n      path: \"{.lukso-token.usd}\"\n      help: LUKSO (LYX) Price in USD" >> /etc/json_exporter/json_exporter.yaml
+sudo printf "modules:\n  default:\n    metrics:\n    - name: lyxusd\n      path: \"{.lukso-token.usd}\"\n      help: LUKSO (LYX) Price in USD" >> /etc/json_exporter/json_exporter.yaml
 echo
 echo "Creating system service"
 echo
