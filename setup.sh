@@ -32,16 +32,18 @@ while [ "$Y_N" = "y" ]; do
 prometheus="y"
 echo "installing Promethues"
 sudo wget https://github.com/prometheus/prometheus/releases/download/v2.44.0/prometheus-2.44.0.linux-amd64.tar.gz --directory-prefix "/home/$logname"
-sudo mkdir /home/$logname/prometheus/
-sudo tar xvfz /home/$logname/prometheus-2.44.0.linux-amd64.tar.gz -C /home/$logname/prometheus/
+sudo tar xvfz /home/$logname/prometheus-2.44.0.linux-amd64.tar.gz
 sudo rm prometheus-2.44.0.linux-amd64.tar.gz
 echo
 echo "Creating system service"
 echo
 sleep 1s
-sudo printf "[Unit]\nDescription=prometheus\n\n[Service]\nExecStart=/home/$logname/prometheus\prometheus\n[Install]\nWantedBy=multi-user.target" >> /etc/systemd/system/prometheus.service
+sudo printf "[Unit]\nDescription=prometheus\n\n[Service]\nExecStart=/home/$logname/prometheus-2.44.0.linux-amd64\prometheus --config.file=/home/$logname/prometheus-2.44.0.linux-amd64/prometheus.yml\n[Install]\nWantedBy=multi-user.target" >> /etc/systemd/system/prometheus.service
 sudo systemctl daemon-reload
 sudo systemctl enable prometheus.service
+sudo systemctl start prometheus.service
+sudo systemctl status prometheus.service
+sleep 2s
 Y_N=n
 done
 
