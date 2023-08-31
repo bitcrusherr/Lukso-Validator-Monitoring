@@ -6,7 +6,7 @@ logname=$(logname)
 echo $green
 echo -----------------------------------------------------------
 echo
-echo           "Bitcrusher's Dash Install v0.04"
+echo           "Bitcrusher's Dash Install v0.05"
 echo
 echo -----------------------------------------------------------
 echo $PINK
@@ -83,7 +83,7 @@ sleep 1s
 if [ -f "/etc/systemd/system/node-exporter.service" ];then
 	sudo rm /etc/systemd/system/node-exporter.service
 fi
-sudo printf "[Unit]\nDescription=node-exporter\n\n[Service]\nExecStart=/home/$logname/node_exporter-1.5.0.linux-386\node_exporter\n[Install]\nWantedBy=multi-user.target" >> /etc/systemd/system/node-exporter.service
+sudo printf "[Unit]\nDescription=node-exporter\n\n[Service]\nExecStart=/home/$logname/node_exporter-1.5.0.linux-386/node_exporter\n[Install]\nWantedBy=multi-user.target" >> /etc/systemd/system/node-exporter.service
 sudo systemctl daemon-reload
 sudo systemctl enable node-exporter.service
 sudo systemctl start node-exporter.service
