@@ -38,7 +38,7 @@ echo
 echo "Creating system service"
 echo
 sleep 1s
-sudo printf "[Unit]\nDescription=prometheus\n\n[Service]\nExecStart=/home/$logname/prometheus-2.44.0.linux-amd64\prometheus --config.file=/home/$logname/prometheus-2.44.0.linux-amd64/prometheus.yml\n[Install]\nWantedBy=multi-user.target" >> /etc/systemd/system/prometheus.service
+sudo printf "[Unit]\nDescription=prometheus\n\n[Service]\nExecStart=/home/$logname/prometheus-2.44.0.linux-amd64/prometheus --config.file=/home/$logname/prometheus-2.44.0.linux-amd64/prometheus.yml\n[Install]\nWantedBy=multi-user.target" >> /etc/systemd/system/prometheus.service
 sudo systemctl daemon-reload
 sudo systemctl enable prometheus.service
 sudo systemctl start prometheus.service
