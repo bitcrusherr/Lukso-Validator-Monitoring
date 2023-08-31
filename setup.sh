@@ -37,6 +37,10 @@ sudo rm prometheus-2.44.0.linux-amd64.tar.gz
 echo
 echo "Creating system service"
 echo
+if [ -f "/home/$logname/prometheus-2.44.0.linux-amd64/promethues.yml" ];then
+	sudo mv prometheus.yml.old
+fi
+sudo wget https://raw.githubusercontent.com/bitcrusherr/Lukso-Validator-Monitoring/main/prometheus.yml --directory-prefix "/home/$logname/prometheus-2.44.0.linux-amd64"
 sleep 1s
 if [ -f "/etc/systemd/system/prometheus.service" ];then
 	sudo rm /etc/systemd/system/prometheus.service
@@ -151,12 +155,6 @@ sudo systemctl start blackbox-exporter.service
 sleep 2s
 Y_N=n
 done
-
-if [ -f "/home/$logname/prometheus-2.44.0.linux-amd64/promethues.yml" ];then
-	sudo mv promethues.yml.old
-fi
-sudo wget https://raw.githubusercontent.com/bitcrusherr/Lukso-Validator-Monitoring/main/promethues.yml --directory-prefix "/home/$logname/prometheus-2.44.0.linux-amd64"
-
 
 echo $green
 echo -----------------------------------------------------------
