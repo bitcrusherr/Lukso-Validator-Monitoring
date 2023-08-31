@@ -6,7 +6,7 @@ logname=$(logname)
 echo $green
 echo -----------------------------------------------------------
 echo
-echo           "Bitcrusher's Dash Install v0.03"
+echo           "Bitcrusher's Dash Install v0.04"
 echo
 echo -----------------------------------------------------------
 echo $PINK
@@ -58,6 +58,10 @@ $(sudo wget -q -O /usr/share/keyrings/grafana.key https://apt.grafana.com/gpg.ke
 $(sudo echo "deb [signed-by=/usr/share/keyrings/grafana.key] https://apt.grafana.com stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list)
 sudo apt-get update
 sudo apt-get install grafana
+sudo systemctl daemon-reload
+sudo systemctl start grafana-server
+sudo systemctl status grafana-server
+sleep 2s
 Y_N=n
 done
 
@@ -100,7 +104,12 @@ echo
 echo "Creating system service"
 echo
 sleep 1s
-sudo printf "[Unit]\nDescription=json-exporter\n\n[Service]\nExecStart=/home/$logname/json_exporter\json_exporter --config.file=/etc/json_exporter/json_exporter.yaml\n[Install]\nWantedBy=multi-user.target" >> /etc/systemd/system/json-exporter.service
+sudo printf "[Unit]\nDescription=json-exporter\n\n[Service]\nExecStart=/home/$logname/json_exporter/json_exporter --config.file=/etc/json_exporter/json_exporter.yaml\n[Install]\nWantedBy=multi-user.target" >> /etc/systemd/system/json-exporter.service
+sudo systemctl daemon-reload
+sudo systemctl enable json-exporter.service
+sudo systemctl start json-exporter.service
+sudo systemctl status json-exporter.service
+sleep 2s
 Y_N=n
 done
 
@@ -123,6 +132,11 @@ echo "Creating system service"
 echo
 sleep 1s
 sudo printf "[Unit]\nDescription=blackbox-exporter\n\n[Service]\nExecStart=/home/$logname/blackbox_exporter-0.23.0.linux-amd64/blackbox_exporter\n[Install]\nWantedBy=multi-user.target" >> /etc/systemd/system/blackbox-exporter.service
+sudo systemctl daemon-reload
+sudo systemctl enable blackbox-exporter.service
+sudo systemctl start jblackbox-exporter.service
+sudo systemctl status blackbox-exporter.service
+sleep 2s
 Y_N=n
 done
 
