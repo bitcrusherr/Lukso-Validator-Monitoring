@@ -97,7 +97,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "9.5.1",
+      "pluginVersion": "10.1.0",
       "targets": [
         {
           "datasource": {
@@ -183,7 +183,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "9.5.1",
+      "pluginVersion": "10.1.0",
       "targets": [
         {
           "datasource": {
@@ -273,7 +273,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "9.5.1",
+      "pluginVersion": "10.1.0",
       "targets": [
         {
           "datasource": {
@@ -335,7 +335,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "9.5.1",
+      "pluginVersion": "10.1.0",
       "targets": [
         {
           "datasource": {
@@ -422,7 +422,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "9.5.1",
+      "pluginVersion": "10.1.0",
       "targets": [
         {
           "datasource": {
@@ -506,7 +506,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "9.5.1",
+      "pluginVersion": "10.1.0",
       "targets": [
         {
           "datasource": {
@@ -580,7 +580,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "9.5.1",
+      "pluginVersion": "10.1.0",
       "targets": [
         {
           "datasource": {
@@ -656,7 +656,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "9.5.1",
+      "pluginVersion": "10.1.0",
       "targets": [
         {
           "datasource": {
@@ -730,7 +730,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "9.5.1",
+      "pluginVersion": "10.1.0",
       "targets": [
         {
           "datasource": {
@@ -792,7 +792,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "9.5.1",
+      "pluginVersion": "10.1.0",
       "targets": [
         {
           "datasource": {
@@ -868,7 +868,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "9.5.1",
+      "pluginVersion": "10.1.0",
       "targets": [
         {
           "datasource": {
@@ -921,6 +921,7 @@
               "tooltip": false,
               "viz": false
             },
+            "insertNulls": false,
             "lineInterpolation": "linear",
             "lineWidth": 1,
             "pointSize": 5,
@@ -1147,7 +1148,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "9.5.1",
+      "pluginVersion": "10.1.0",
       "targets": [
         {
           "datasource": {
@@ -1257,7 +1258,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "9.5.1",
+      "pluginVersion": "10.1.0",
       "targets": [
         {
           "datasource": {
@@ -1315,7 +1316,7 @@
         "type": "prometheus",
         "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
       },
-      "description": "Total earnings in USD.",
+      "description": "LYX in USD.",
       "fieldConfig": {
         "defaults": {
           "decimals": 2,
@@ -1372,20 +1373,8 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "9.5.1",
+      "pluginVersion": "10.1.0",
       "targets": [
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "e030260c-47af-414f-b2d3-e7cc1daf7a89"
-          },
-          "editorMode": "code",
-          "expr": "sum(validator_balance{job=\"validator\"})-(count(validator_balance{job=\"validator\"} > 16 and validator_statuses{job=\"validator\"} == 3)*32)",
-          "instant": true,
-          "interval": "",
-          "legendFormat": "total_balance",
-          "refId": "A"
-        },
         {
           "datasource": {
             "type": "prometheus",
@@ -1397,20 +1386,9 @@
           "interval": "",
           "legendFormat": "lyxusd",
           "refId": "B"
-        },
-        {
-          "datasource": {
-            "name": "Expression",
-            "type": "__expr__",
-            "uid": "__expr__"
-          },
-          "expression": "$A * $B",
-          "hide": false,
-          "refId": "C",
-          "type": "math"
         }
       ],
-      "title": "Total Earnings (USD)",
+      "title": "LYX (USD)",
       "transformations": [
         {
           "id": "reduce",
@@ -1481,7 +1459,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "9.5.1",
+      "pluginVersion": "10.1.0",
       "targets": [
         {
           "datasource": {
@@ -1568,7 +1546,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "9.5.1",
+      "pluginVersion": "10.1.0",
       "targets": [
         {
           "datasource": {
@@ -1657,7 +1635,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "9.5.1",
+      "pluginVersion": "10.1.0",
       "targets": [
         {
           "datasource": {
@@ -1700,7 +1678,7 @@
       },
       "gridPos": {
         "h": 3,
-        "w": 2,
+        "w": 3,
         "x": 8,
         "y": 5
       },
@@ -1722,7 +1700,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "9.5.1",
+      "pluginVersion": "10.1.0",
       "targets": [
         {
           "datasource": {
@@ -1806,8 +1784,8 @@
       },
       "gridPos": {
         "h": 3,
-        "w": 2,
-        "x": 10,
+        "w": 1,
+        "x": 11,
         "y": 5
       },
       "id": 33,
@@ -1827,7 +1805,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "9.5.1",
+      "pluginVersion": "10.1.0",
       "targets": [
         {
           "datasource": {
@@ -1888,7 +1866,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "9.5.1",
+      "pluginVersion": "10.1.0",
       "targets": [
         {
           "datasource": {
@@ -1958,7 +1936,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "9.5.1",
+      "pluginVersion": "10.1.0",
       "targets": [
         {
           "datasource": {
@@ -2053,7 +2031,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "9.5.1",
+      "pluginVersion": "10.1.0",
       "targets": [
         {
           "datasource": {
@@ -2139,7 +2117,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "9.5.1",
+      "pluginVersion": "10.1.0",
       "targets": [
         {
           "datasource": {
@@ -2225,7 +2203,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "9.5.1",
+      "pluginVersion": "10.1.0",
       "targets": [
         {
           "datasource": {
@@ -2310,7 +2288,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "9.5.1",
+      "pluginVersion": "10.1.0",
       "targets": [
         {
           "datasource": {
@@ -2392,7 +2370,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "9.5.1",
+      "pluginVersion": "10.1.0",
       "targets": [
         {
           "datasource": {
@@ -2475,7 +2453,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "9.5.1",
+      "pluginVersion": "10.1.0",
       "targets": [
         {
           "datasource": {
@@ -2558,7 +2536,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "9.5.1",
+      "pluginVersion": "10.1.0",
       "targets": [
         {
           "datasource": {
@@ -2641,7 +2619,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "9.5.1",
+      "pluginVersion": "10.1.0",
       "targets": [
         {
           "datasource": {
@@ -2656,7 +2634,7 @@
           "refId": "A"
         }
       ],
-      "title": "Daily Earnings (USD)",
+      "title": "Monthly Earnings (USD)",
       "transformations": [],
       "type": "stat"
     },
@@ -2733,7 +2711,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "9.5.1",
+      "pluginVersion": "10.1.0",
       "targets": [
         {
           "datasource": {
@@ -2818,7 +2796,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "9.5.1",
+      "pluginVersion": "10.1.0",
       "targets": [
         {
           "datasource": {
@@ -2884,7 +2862,7 @@
       },
       "gridPos": {
         "h": 3,
-        "w": 2,
+        "w": 3,
         "x": 10,
         "y": 9
       },
@@ -2902,7 +2880,7 @@
         },
         "showHeader": false
       },
-      "pluginVersion": "9.5.1",
+      "pluginVersion": "10.1.0",
       "targets": [
         {
           "datasource": {
@@ -2976,8 +2954,8 @@
       },
       "gridPos": {
         "h": 3,
-        "w": 2,
-        "x": 12,
+        "w": 1,
+        "x": 13,
         "y": 9
       },
       "id": 76,
@@ -2996,7 +2974,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "9.5.1",
+      "pluginVersion": "10.1.0",
       "targets": [
         {
           "datasource": {
@@ -3081,7 +3059,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "9.5.1",
+      "pluginVersion": "10.1.0",
       "targets": [
         {
           "datasource": {
@@ -3142,6 +3120,7 @@
               "tooltip": false,
               "viz": false
             },
+            "insertNulls": false,
             "lineInterpolation": "smooth",
             "lineStyle": {
               "fill": "solid"
@@ -3288,7 +3267,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "9.5.1",
+      "pluginVersion": "10.1.0",
       "targets": [
         {
           "datasource": {
@@ -3372,7 +3351,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "9.5.1",
+      "pluginVersion": "10.1.0",
       "targets": [
         {
           "datasource": {
@@ -3456,7 +3435,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "9.5.1",
+      "pluginVersion": "10.1.0",
       "targets": [
         {
           "datasource": {
@@ -3540,7 +3519,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "9.5.1",
+      "pluginVersion": "10.1.0",
       "targets": [
         {
           "datasource": {
@@ -3969,7 +3948,7 @@
             "properties": [
               {
                 "id": "custom.width",
-                "value": 59
+                "value": 79
               }
             ]
           },
@@ -4026,7 +4005,7 @@
           }
         ]
       },
-      "pluginVersion": "9.5.1",
+      "pluginVersion": "10.1.0",
       "targets": [
         {
           "datasource": {
@@ -4169,6 +4148,7 @@
               "tooltip": false,
               "viz": false
             },
+            "insertNulls": false,
             "lineInterpolation": "linear",
             "lineWidth": 1,
             "pointSize": 5,
@@ -4270,6 +4250,7 @@
               "tooltip": false,
               "viz": false
             },
+            "insertNulls": false,
             "lineInterpolation": "linear",
             "lineWidth": 1,
             "pointSize": 5,
@@ -4463,6 +4444,7 @@
               "tooltip": false,
               "viz": false
             },
+            "insertNulls": false,
             "lineInterpolation": "linear",
             "lineWidth": 1,
             "pointSize": 5,
@@ -4655,6 +4637,7 @@
               "tooltip": false,
               "viz": false
             },
+            "insertNulls": false,
             "lineInterpolation": "linear",
             "lineWidth": 1,
             "pointSize": 5,
@@ -4772,6 +4755,7 @@
               "tooltip": false,
               "viz": false
             },
+            "insertNulls": false,
             "lineInterpolation": "linear",
             "lineWidth": 1,
             "pointSize": 5,
@@ -4795,8 +4779,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -4946,7 +4929,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "9.5.1",
+      "pluginVersion": "10.1.0",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -5013,7 +4996,7 @@
       }
     }
   ],
-  "refresh": "",
+  "refresh": "1m",
   "schemaVersion": 38,
   "style": "dark",
   "tags": [],
@@ -5040,6 +5023,6 @@
   "timezone": "",
   "title": "Lukso Validator2",
   "uid": "aaea9e00-8d49-44a0-ae1b-8d0f3927c157",
-  "version": 77,
+  "version": 80,
   "weekStart": ""
 }
