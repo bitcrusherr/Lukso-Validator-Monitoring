@@ -6,7 +6,7 @@ logname=$(logname)
 echo $green
 echo -----------------------------------------------------------
 echo
-echo           "Bitcrusher's Dash Install v0.06"
+echo           "Bitcrusher's Dash Install v0.07"
 echo
 echo -----------------------------------------------------------
 echo $PINK
@@ -37,7 +37,7 @@ sudo rm prometheus-2.44.0.linux-amd64.tar.gz
 echo
 echo "Creating system service"
 echo
-if [ -f "/home/$logname/prometheus-2.44.0.linux-amd64/promethues.yml" ];then
+if [ -f "/home/$logname/prometheus-2.44.0.linux-amd64/prometheus.yml" ];then
 	sudo mv prometheus.yml.old
 fi
 sudo wget https://raw.githubusercontent.com/bitcrusherr/Lukso-Validator-Monitoring/main/prometheus.yml --directory-prefix "/home/$logname/prometheus-2.44.0.linux-amd64"
