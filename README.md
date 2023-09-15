@@ -20,9 +20,11 @@ Blackbox_Exporter
 
 1 - Run setup.sh and follow on screen instructions ( sudo wget https://raw.githubusercontent.com/bitcrusherr/Lukso-Validator-Monitoring/main/setup.sh && sudo sh setup.sh ) Without brackets
 
-2 - Import the dashboard.json to grafana
+2 - Import the dashboard.json to grafana (if you receive N/A over the dash thats because the data store id is not the same as mine and you will need to edit it in the .json to suit)
 
-3 - after completing install check services are running example: sudo systemctl status promethues.service
+3 - Setup grafana to connect to datastore promethues
+
+4 - after completing install check services are running example: sudo systemctl status promethues.service
 
 # Trouble Shooting
 If you are missing information or its not displayed correctly chances are the service isnt started or
